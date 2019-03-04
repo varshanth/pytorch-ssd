@@ -53,7 +53,7 @@ else:
 
 data = []
 for images in os.listdir(images_folder):
-	orig_image = cv2.imread(images)
+	orig_image = cv2.imread(images_folder/images)
 	image = cv2.cvtColor(orig_image, cv2.COLOR_BGR2RGB)
 	boxes, labels, probs = predictor.predict(image, 10, 0.4)
 
