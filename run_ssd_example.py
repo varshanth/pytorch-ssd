@@ -72,7 +72,7 @@ for i in range(boxes.size(0)):
     	data['person'].append({
 		'boxes': box,
 		'distance': '250'
-	)}
+	})
 
 with open('data.txt', 'w') as outfile:
         json.dump(data, outfile)
