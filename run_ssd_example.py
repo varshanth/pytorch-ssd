@@ -54,6 +54,8 @@ orig_image = cv2.imread(image_path)
 image = cv2.cvtColor(orig_image, cv2.COLOR_BGR2RGB)
 boxes, labels, probs = predictor.predict(image, 10, 0.4)
 
+data = {}
+data['person'] = []
 for i in range(boxes.size(0)):
     box = boxes[i, :]
     cv2.rectangle(orig_image, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
@@ -65,6 +67,15 @@ for i in range(boxes.size(0)):
                 1,  # font scale
                 (255, 0, 255),
                 2)  # line type
+
+    if label[i] is 'person':
+    	data['person'].append({
+		'boxes': box,
+		'distance': '250'
+	)}
+
+with open('data.txt', 'w') as outfile:
+        json.dump(data, outfile)
 path = "run_ssd_example_output.jpg"
 cv2.imwrite(path, orig_image)
 print(f"Found {len(probs)} objects. The output image is {path}")
