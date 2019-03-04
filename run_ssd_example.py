@@ -70,7 +70,7 @@ for i in range(boxes.size(0)):
 
     if labels[i] == 15:
     	data['person'].append({
-		'boxes': box,
+		'boxes': box.cpu().numpy(),
 		'distance': '250'
 	})
 
