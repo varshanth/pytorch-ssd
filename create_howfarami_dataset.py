@@ -60,18 +60,18 @@ for images in os.listdir('./images_folder'):
 	img_id = os.path.splitext(images)[0]
 	data_per_image = {'boxes' : [], 'labels' : [], 'distances' : [], 'image_id' : img_id}
 	for i in range(boxes.size(0)):
-    		box = boxes[i, :]
-    		cv2.rectangle(orig_image, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
-    		#label = f"""{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
-    		label = f"{class_names[labels[i]]}: {probs[i]:.2f}"
-    		cv2.putText(orig_image, label,
-                	(box[0] + 20, box[1] + 40),
-                	cv2.FONT_HERSHEY_SIMPLEX,
-                	1,  # font scale
-                	(255, 0, 255),
-                	2)  # line type
+		box = boxes[i, :]
+		cv2.rectangle(orig_image, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
+		#label = f"""{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
+		label = f"{class_names[labels[i]]}: {probs[i]:.2f}"
+		cv2.putText(orig_image, label,
+			(box[0] + 20, box[1] + 40),
+			cv2.FONT_HERSHEY_SIMPLEX,
+			1,  # font scale
+			(255, 0, 255),
+			2)  # line type
 
-    		if labels[i] == 15:
+		if labels[i] == 15:
 			data_per_image['boxes'].append(box.cpu().numpy().tolist())
 			data_per_image['labels'].append('person')
 			data_per_image['distances'].append(10)
