@@ -9,7 +9,7 @@ eval_results/
 *.pth
 
 # images
-*.jpg
+#*.jpg
 *.png
 
 # Byte-compiled / optimized / DLL files
