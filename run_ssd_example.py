@@ -68,7 +68,7 @@ for i in range(boxes.size(0)):
                 (255, 0, 255),
                 2)  # line type
 
-    if label[i] == 15:
+    if labels[i] == 15:
     	data['person'].append({
 		'boxes': box,
 		'distance': '250'
