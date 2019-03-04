@@ -25,7 +25,7 @@ elif net_type == 'mb1-ssd':
 elif net_type == 'mb1-ssd-lite':
     net = create_mobilenetv1_ssd_lite(len(class_names), is_test=True)
 elif net_type == 'mb2-ssd-lite':
-    net = create_mobilenetv2_ssd_lite(len(class_names), is_test=True)
+    net = create_mobilenetv2_ssd_lite(len(class_names), is_test=True, device="cuda:0")
 elif net_type == 'sq-ssd-lite':
     net = create_squeezenet_ssd_lite(len(class_names), is_test=True)
 else:
