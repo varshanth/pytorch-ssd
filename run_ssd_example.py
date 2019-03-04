@@ -21,7 +21,7 @@ class_names = [name.strip() for name in open(label_path).readlines()]
 if net_type == 'vgg16-ssd':
     net = create_vgg_ssd(len(class_names), is_test=True)
 elif net_type == 'mb1-ssd':
-    net = create_mobilenetv1_ssd(len(class_names), is_test=True)
+    net = create_mobilenetv1_ssd(len(class_names), is_test=True, device="cuda:0")
 elif net_type == 'mb1-ssd-lite':
     net = create_mobilenetv1_ssd_lite(len(class_names), is_test=True)
 elif net_type == 'mb2-ssd-lite':
