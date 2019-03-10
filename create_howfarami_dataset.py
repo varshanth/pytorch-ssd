@@ -8,6 +8,7 @@ import cv2
 import sys
 import json
 import os
+from PIL import Image
 
 if len(sys.argv) < 6:
     print('Usage: python run_ssd_example.py <net type>  <model path> <image path>')
@@ -53,7 +54,8 @@ else:
 
 data = []
 for images in os.listdir(images_folder):
-	orig_image = cv2.imread(images_folder + "/" + images)
+	pil_image = Image.open(images_folder + "/" + images).convert('RGB')
+	orig_image = np.array(pil_image)
 	image = cv2.cvtColor(orig_image, cv2.COLOR_BGR2RGB)
 	boxes, labels, probs = predictor.predict(image, 10, 0.4)
 
