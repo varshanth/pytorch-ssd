@@ -9,6 +9,7 @@ import sys
 import json
 import os
 from PIL import Image
+import numpy as np
 
 if len(sys.argv) < 6:
     print('Usage: python run_ssd_example.py <net type>  <model path> <image path>')
