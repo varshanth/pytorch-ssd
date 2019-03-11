@@ -55,8 +55,9 @@ else:
 
 data = []
 for images in os.listdir(images_folder):
-	pil_image = Image.open(images_folder + "/" + images).convert('RGB')
-	orig_image = np.array(pil_image)
+	#pil_image = Image.open(images_folder + "/" + images).convert('RGB')
+	#orig_image = np.array(pil_image)
+	orig_image = cv2.imread(images_folder + "/" + images)
 	trans_image = orig_image
 	#if height
 	height, width, channels = trans_image.shape
