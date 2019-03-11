@@ -58,11 +58,11 @@ for images in os.listdir(images_folder):
 	pil_image = Image.open(images_folder + "/" + images).convert('RGB')
 	orig_image = np.array(pil_image)
 	trans_image = orig_image
-    	#if height
-    	height, width, channels = trans_image.shape
+	#if height
+	height, width, channels = trans_image.shape
 	# rotating the image if height is greater than width
-    	if height < width:
-        	trans_image = cv2.rotate(orig_image, cv2.ROTATE_90_CLOCKWISE)
+	if height < width:
+		trans_image = cv2.rotate(orig_image, cv2.ROTATE_90_CLOCKWISE)
 	image = cv2.cvtColor(trans_image, cv2.COLOR_BGR2RGB)
 	boxes, labels, probs = predictor.predict(image, 10, 0.4)
 
