@@ -64,6 +64,7 @@ for images in os.listdir(images_folder):
 	# rotating the image if height is greater than width
 	if height < width:
 		trans_image = cv2.rotate(orig_image, cv2.ROTATE_90_CLOCKWISE)
+	print(images, height, width)
 	image = cv2.cvtColor(trans_image, cv2.COLOR_BGR2RGB)
 	boxes, labels, probs = predictor.predict(image, 10, 0.4)
 
