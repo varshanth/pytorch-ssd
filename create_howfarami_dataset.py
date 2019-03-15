@@ -88,7 +88,7 @@ for images in os.listdir(images_folder):
 			data_per_image['distances'].append(10)
 	data.append(data_per_image)
 
-data = sorted(data, key=lambda k: k['data_per_image'].get('image_id', 0), reverse=True)
+data = sorted(data, key=lambda k: k[].get('image_id', 0), reverse=True)
 with open('data.txt', 'w') as outfile:
         json.dump(data, outfile)
 path = "run_ssd_example_output.jpg"
