@@ -3,7 +3,7 @@ import torch.nn.functional as F
 import torch
 
 
-from ..utils import box_utils
+from a.utils import box_utils
 
 
 class MultiboxLoss(nn.Module):
@@ -22,14 +22,20 @@ class MultiboxLoss(nn.Module):
         self.priors = priors
         self.priors.to(device)
 
-    def forward(self, confidence, predicted_locations, labels, gt_locations):
+    # DISTANCE CHANGE
+    # def forward(self, confidence, predicted_locations, labels, gt_locations):
+    def forward(self, confidence, predicted_locations, pred_dist, labels, gt_locations, gt_dist):
         """Compute classification loss and smooth l1 loss.
 
         Args:
             confidence (batch_size, num_priors, num_classes): class predictions.
             locations (batch_size, num_priors, 4): predicted locations.
+            # DISTANCE CHANGE
+            pred_dist (batch_size, num_priors, num_dist_channels): predicted distances
             labels (batch_size, num_priors): real labels of all the priors.
             boxes (batch_size, num_priors, 4): real boxes corresponding all the priors.
+            # DISTANCE CHANGE
+            gt_dist (batch_size, num_priors, num_dist_channels): ground truth distances
         """
         num_classes = confidence.size(2)
         with torch.no_grad():
@@ -43,5 +49,10 @@ class MultiboxLoss(nn.Module):
         predicted_locations = predicted_locations[pos_mask, :].reshape(-1, 4)
         gt_locations = gt_locations[pos_mask, :].reshape(-1, 4)
         smooth_l1_loss = F.smooth_l1_loss(predicted_locations, gt_locations, size_average=False)
+
+        # DISTANCE CHANGE
+        pred_dist = pred_dist[pos_mask, :].reshape(-1, 1)
+        l2_loss = F.mse_loss(pred_dist, gt_dist, size_average=False)
+
         num_pos = gt_locations.size(0)
-        return smooth_l1_loss/num_pos, classification_loss/num_pos
+        return smooth_l1_loss/num_pos, classification_loss/num_pos, l2_loss/num_pos

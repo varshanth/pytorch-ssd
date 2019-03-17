@@ -36,10 +36,12 @@ class SSD(nn.Module):
         if is_test:
             self.config = config
             self.priors = config.priors.to(self.device)
-            
+
     def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
         confidences = []
         locations = []
+        # DISTANCE CHANGE
+        distances = []
         start_layer_index = 0
         header_index = 0
         for end_layer_index in self.source_layer_indexes:
@@ -69,33 +71,43 @@ class SSD(nn.Module):
                     x = layer(x)
                 end_layer_index += 1
             start_layer_index = end_layer_index
-            confidence, location = self.compute_header(header_index, y)
+            # DISTANCE CHANGE
+            confidence, location, distance = self.compute_header(header_index, y)
             header_index += 1
             confidences.append(confidence)
             locations.append(location)
+            # DISTANCE CHANGE
+            distances.append(distance)
 
         for layer in self.base_net[end_layer_index:]:
             x = layer(x)
 
         for layer in self.extras:
             x = layer(x)
-            confidence, location = self.compute_header(header_index, x)
+            # DISTANCE CHANGE
+            confidence, location, distance = self.compute_header(header_index, x)
             header_index += 1
             confidences.append(confidence)
             locations.append(location)
+            # DISTANCE CHANGE
+            distances.append(distance)
 
         confidences = torch.cat(confidences, 1)
         locations = torch.cat(locations, 1)
-        
+        # DISTANCE CHANGE
+        distances = torch.cat(distances, 1)
+
         if self.is_test:
             confidences = F.softmax(confidences, dim=2)
             boxes = box_utils.convert_locations_to_boxes(
                 locations, self.priors, self.config.center_variance, self.config.size_variance
             )
             boxes = box_utils.center_form_to_corner_form(boxes)
-            return confidences, boxes
+            # DISTANCE CHANGE
+            return confidences, boxes, distances
         else:
-            return confidences, locations
+            # DISTANCE CHANGE
+            return confidences, locations, distances
 
     def compute_header(self, i, x):
         confidence = self.classification_headers[i](x)
@@ -106,7 +118,13 @@ class SSD(nn.Module):
         location = location.permute(0, 2, 3, 1).contiguous()
         location = location.view(location.size(0), -1, 4)
 
-        return confidence, location
+        # DISTANCE CHANGE
+        num_dist_channels = 1
+        distance = self.regression_headers[i+6](x)
+        distance = distance.permute(0, 2, 3, 1).contiguous()
+        distance = distance.view(location.size(0), -1, num_dist_channels)
+
+        return confidence, location, distance
 
     def init_from_base_net(self, model):
         self.base_net.load_state_dict(torch.load(model, map_location=lambda storage, loc: storage), strict=True)
@@ -146,16 +164,25 @@ class MatchPrior(object):
         self.size_variance = size_variance
         self.iou_threshold = iou_threshold
 
-    def __call__(self, gt_boxes, gt_labels):
+    # DISTANCE CHANGE
+    def __call__(self, gt_boxes, gt_labels, gt_dist):
+    # def __call__(self, gt_boxes, gt_labels, gt_dist):
         if type(gt_boxes) is np.ndarray:
             gt_boxes = torch.from_numpy(gt_boxes)
         if type(gt_labels) is np.ndarray:
             gt_labels = torch.from_numpy(gt_labels)
-        boxes, labels = box_utils.assign_priors(gt_boxes, gt_labels,
+        # DISTANCE CHANGE
+        if type(gt_dist) is np.ndarray:
+            gt_dist = torch.from_numpy(gt_dist)
+        # DISTANCE CHANGE
+        # boxes, labels = box_utils.assign_priors(gt_boxes, gt_labels,
+        boxes, labels, distances = box_utils.assign_priors(gt_boxes, gt_labels, gt_dist,
                                                 self.corner_form_priors, self.iou_threshold)
         boxes = box_utils.corner_form_to_center_form(boxes)
         locations = box_utils.convert_boxes_to_locations(boxes, self.center_form_priors, self.center_variance, self.size_variance)
-        return locations, labels
+        # DISTANCE CHANGE
+        # return locations, labels
+        return locations, labels, distances
 
 
 def _xavier_init_(m: nn.Module):

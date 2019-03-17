@@ -100,6 +100,8 @@ class ToPercentCoords(object):
         boxes[:, 2] /= width
         boxes[:, 1] /= height
         boxes[:, 3] /= height
+        # DISTANCE CHANGE
+        boxes[boxes > 1.0] = 1.0
 
         return image, boxes, labels
 

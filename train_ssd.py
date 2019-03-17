@@ -112,35 +112,51 @@ def train(loader, net, criterion, optimizer, device, debug_steps=100, epoch=-1):
     running_loss = 0.0
     running_regression_loss = 0.0
     running_classification_loss = 0.0
+    # DISTANCE CHANGE
+    running_dist_reg_loss = 0.0
     for i, data in enumerate(loader):
-        images, boxes, labels = data
+        # DISTANCE CHANGE
+        images, boxes, labels, gt_dist = data
         images = images.to(device)
         boxes = boxes.to(device)
         labels = labels.to(device)
+        # DISTANCE CHANGE
+        gt_dist = gt_dist.to(device)
 
         optimizer.zero_grad()
-        confidence, locations = net(images)
-        regression_loss, classification_loss = criterion(confidence, locations, labels, boxes)  # TODO CHANGE BOXES
-        loss = regression_loss + classification_loss
+        # DISTANCE CHANGE
+        confidence, locations, pred_dist = net(images)
+        # DISTANCE CHANGE
+        regression_loss, classification_loss, dist_reg_loss = criterion(confidence, locations, pred_dist, labels, boxes, gt_dist)  # TODO CHANGE BOXES
+        # DISTANCE CHANGE
+        loss = regression_loss + classification_loss + dist_reg_loss
         loss.backward()
         optimizer.step()
 
         running_loss += loss.item()
         running_regression_loss += regression_loss.item()
         running_classification_loss += classification_loss.item()
+        # DISTANCE CHANGE
+        running_dist_reg_loss += dis_reg_loss.item()
         if i and i % debug_steps == 0:
             avg_loss = running_loss / debug_steps
             avg_reg_loss = running_regression_loss / debug_steps
             avg_clf_loss = running_classification_loss / debug_steps
+            # DISTANCE CHANGE
+            avg_dist_reg_loss = running_dist_reg_loss / debug_steps
+            # DISTANCE CHANGE
             logging.info(
                 f"Epoch: {epoch}, Step: {i}, " +
                 f"Average Loss: {avg_loss:.4f}, " +
                 f"Average Regression Loss {avg_reg_loss:.4f}, " +
-                f"Average Classification Loss: {avg_clf_loss:.4f}"
+                f"Average Classification Loss: {avg_clf_loss:.4f}" +
+                f"Average Distance Regression Loss: {avg_dist_reg_loss:.4f}"
             )
             running_loss = 0.0
             running_regression_loss = 0.0
             running_classification_loss = 0.0
+            # DISTANCE CHANGE
+            running_dist_reg_loss = 0.0
 
 
 def test(loader, net, criterion, device):
@@ -148,23 +164,31 @@ def test(loader, net, criterion, device):
     running_loss = 0.0
     running_regression_loss = 0.0
     running_classification_loss = 0.0
+    # DISTANCE CHANGE
+    running_dist_reg_loss = 0.0
     num = 0
     for _, data in enumerate(loader):
-        images, boxes, labels = data
+        # DISTANCE CHANGE
+        images, boxes, labels, gt_dist = data
         images = images.to(device)
         boxes = boxes.to(device)
         labels = labels.to(device)
+        # DISTANCE CHANGE
+        gt_dist = gt_dist.to(device)
         num += 1
 
         with torch.no_grad():
-            confidence, locations = net(images)
-            regression_loss, classification_loss = criterion(confidence, locations, labels, boxes)
-            loss = regression_loss + classification_loss
+            # DISTANCE CHANGE
+            confidence, locations, pred_dist = net(images)
+            regression_loss, classification_loss, dist_reg_loss = criterion(confidence, locations, pred_dist, labels, boxes, gt_dist)
+            loss = regression_loss + classification_loss + dist_reg_loss
 
         running_loss += loss.item()
         running_regression_loss += regression_loss.item()
         running_classification_loss += classification_loss.item()
-    return running_loss / num, running_regression_loss / num, running_classification_loss / num
+        # DISTANCE CHANGE
+        running_dist_reg_loss += dist_reg_loss.item()
+    return running_loss / num, running_regression_loss / num, running_classification_loss / num, running_dist_reg_loss / num
 
 
 if __name__ == '__main__':
@@ -212,6 +236,14 @@ if __name__ == '__main__':
             label_file = os.path.join(args.checkpoint_folder, "open-images-model-labels.txt")
             store_labels(label_file, dataset.class_names)
             logging.info(dataset)
+            num_classes = len(dataset.class_names)
+        # DISTANCE CHANGE
+        elif args.dataset_type =='how_far_am_i':
+            dataset = HowFarAmIDataset(dataset_path,
+                    transform=train_transform, target_transform=target_transform,
+                    dataset_type="train")
+            label_file = os.path.join(args.checkpoint_folder, "howfarami-model-labels.txt")
+            store_labels(label_file, dataset.class_names)
             num_classes = len(dataset.class_names)
 
         else:
@@ -317,14 +349,17 @@ if __name__ == '__main__':
         scheduler.step()
         train(train_loader, net, criterion, optimizer,
               device=DEVICE, debug_steps=args.debug_steps, epoch=epoch)
-        
+
         if epoch % args.validation_epochs == 0 or epoch == args.num_epochs - 1:
-            val_loss, val_regression_loss, val_classification_loss = test(val_loader, net, criterion, DEVICE)
+            # DISTANCE CHANGE
+            val_loss, val_regression_loss, val_classification_loss, val_dist_reg_loss = test(val_loader, net, criterion, DEVICE)
             logging.info(
                 f"Epoch: {epoch}, " +
                 f"Validation Loss: {val_loss:.4f}, " +
                 f"Validation Regression Loss {val_regression_loss:.4f}, " +
                 f"Validation Classification Loss: {val_classification_loss:.4f}"
+                # DISTANCE CHANGE
+                f"Validation Distance Reg Loss: {val_dist_reg_loss:.4f}"
             )
             model_path = os.path.join(args.checkpoint_folder, f"{args.net}-Epoch-{epoch}-Loss-{val_loss}.pth")
             net.save(model_path)
