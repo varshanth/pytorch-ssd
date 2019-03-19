@@ -1,4 +1,4 @@
-cscope 15 $HOME/Downloads/pytorch-ssd               0000172690
+cscope 15 $HOME/Downloads/pytorch-ssd               0000173327
 	@convert_to_caffe2_models.py
 
 1 
@@ -7818,13 +7818,13 @@ O³nImagesD©a£t
  
 	gvisiÚ
 .
-	gÂ
+	gd©a£ts
 .
-muÉibox_loss
+how_çr_am_i
  
 impÜt
  
-MuÉiboxLoss
+HowF¬AmID©a£t
 
 
 21 
@@ -7832,13 +7832,13 @@ MuÉiboxLoss
  
 	gvisiÚ
 .
-	gssd
+	gÂ
 .
-cÚfig
+muÉibox_loss
  
 impÜt
  
-vgg_ssd_cÚfig
+MuÉiboxLoss
 
 
 22 
@@ -7852,7 +7852,7 @@ cÚfig
  
 impÜt
  
-mob’‘v1_ssd_cÚfig
+vgg_ssd_cÚfig
 
 
 23 
@@ -7866,10 +7866,24 @@ cÚfig
  
 impÜt
  
-squ“z’‘_ssd_cÚfig
+mob’‘v1_ssd_cÚfig
 
 
 24 
+äom
+ 
+	gvisiÚ
+.
+	gssd
+.
+cÚfig
+ 
+impÜt
+ 
+squ“z’‘_ssd_cÚfig
+
+
+25 
 äom
  
 	gvisiÚ
@@ -7885,7 +7899,7 @@ impÜt
 Te¡T¿nsfÜm
 
 
-26 
+27 
 	g·r£r
  = 
 ¬g·r£
@@ -7893,11 +7907,11 @@ Te¡T¿nsfÜm
 Argum’tP¬£r
 (
 
-27 
+28 
 desütiÚ
 ='Single Shot MultiBox Detector Training With Pytorch')
 
-29 
+30 
 ·r£r
 .
 add_¬gum’t
@@ -7907,11 +7921,11 @@ ty³
 ¡r
 ,
 
-30 
+31 
 h–p
 ='Specify datasetype. Currently support voc‡nd open_images.')
 
-32 
+33 
 ·r£r
 .
 add_¬gum’t
@@ -7921,7 +7935,7 @@ add_¬gum’t
 h–p
 ='Dataset directory…ath')
 
-33 
+34 
 ·r£r
 .
 add_¬gum’t
@@ -7929,7 +7943,7 @@ add_¬gum’t
 h–p
 ='Dataset directory…ath')
 
-34 
+35 
 ·r£r
 .
 add_¬gum’t
@@ -7937,21 +7951,21 @@ add_¬gum’t
 aùiÚ
 ='store_true',
 
-35 
+36 
 h–p
 ="Balanceraining data by down-sampling more frequent†abels.")
 
-38 
+39 
 ·r£r
 .
 add_¬gum’t
 ('--net', ="vgg16-ssd",
 
-39 
+40 
 h–p
 ="The‚etwork‡rchitecture, it can be mb1-ssd, mb1-lite-ssd, mb2-ssd-lite or vgg16-ssd.")
 
-40 
+41 
 ·r£r
 .
 add_¬gum’t
@@ -7959,11 +7973,11 @@ add_¬gum’t
 aùiÚ
 ='store_true',
 
-41 
+42 
 h–p
 ="Freeze base‚et†ayers.")
 
-42 
+43 
 ·r£r
 .
 add_¬gum’t
@@ -7971,11 +7985,11 @@ add_¬gum’t
 aùiÚ
 ='store_true',
 
-43 
+44 
 h–p
 ="Freeze‡llhe†ayersƒxcepthe…rediction head.")
 
-45 
+46 
 ·r£r
 .
 add_¬gum’t
@@ -7983,15 +7997,15 @@ add_¬gum’t
 ty³
 =,
 
-46 
+47 
 h–p
 ='Width Multiplifier for MobilenetV2')
 
-48 #P¬am 
+49 #P¬am 
 SGD
 
 
-49 
+50 
 ·r£r
 .
 add_¬gum’t
@@ -7999,11 +8013,11 @@ add_¬gum’t
 ty³
 =,
 
-50 
+51 
 h–p
 ='initial†earning„ate')
 
-51 
+52 
 ·r£r
 .
 add_¬gum’t
@@ -8011,11 +8025,11 @@ add_¬gum’t
 ty³
 =,
 
-52 
+53 
 h–p
 ='Momentum value for optim')
 
-53 
+54 
 ·r£r
 .
 add_¬gum’t
@@ -8023,11 +8037,11 @@ add_¬gum’t
 ty³
 =,
 
-54 
+55 
 h–p
 ='Weight decay for SGD')
 
-55 
+56 
 ·r£r
 .
 add_¬gum’t
@@ -8035,11 +8049,11 @@ add_¬gum’t
 ty³
 =,
 
-56 
+57 
 h–p
 ='Gamma update for SGD')
 
-57 
+58 
 ·r£r
 .
 add_¬gum’t
@@ -8049,11 +8063,11 @@ NÚe
 ty³
 =,
 
-58 
+59 
 h–p
 ='initial†earning„ate for base‚et.')
 
-59 
+60 
 ·r£r
 .
 add_¬gum’t
@@ -8063,11 +8077,11 @@ NÚe
 ty³
 =,
 
-60 
+61 
 h–p
 ='initial†earning„ate forhe†ayers‚ot in base‚et‡nd…rediction heads.')
 
-63 #P¬am 
+64 #P¬am 
 lßdšg
  
 ´‘¿šed
@@ -8079,17 +8093,17 @@ ba£Ãt
 checkpošts
 .
 
-64 
+65 
 ·r£r
 .
 add_¬gum’t
 ('--base_net',
 
-65 
+66 
 h–p
 ='Pretrained base model')
 
-66 
+67 
 ·r£r
 .
 add_¬gum’t
@@ -8097,7 +8111,7 @@ add_¬gum’t
 h–p
 ='Pre-trained base model')
 
-67 
+68 
 ·r£r
 .
 add_¬gum’t
@@ -8109,11 +8123,11 @@ ty³
 ¡r
 ,
 
-68 
+69 
 h–p
 ='Checkpoint state_dict fileo„esumeraining from')
 
-71 
+72 
 ·r£r
 .
 add_¬gum’t
@@ -8123,11 +8137,11 @@ ty³
 ¡r
 ,
 
-72 
+73 
 h–p
 ="Scheduler for SGD. It can one of multi-step‡nd cosine")
 
-74 #P¬am 
+75 #P¬am 
 MuÉi
 -
 ¡•
@@ -8135,7 +8149,7 @@ MuÉi
 ScheduËr
 
 
-75 
+76 
 ·r£r
 .
 add_¬gum’t
@@ -8145,17 +8159,17 @@ ty³
 ¡r
 ,
 
-76 
+77 
 h–p
 ="milestones for MultiStepLR")
 
-78 #P¬am 
+79 #P¬am 
 Cosše
  
 AÂ—lšg
 
 
-79 
+80 
 ·r£r
 .
 add_¬gum’t
@@ -8163,15 +8177,15 @@ add_¬gum’t
 ty³
 =,
 
-80 
+81 
 h–p
 ='T_max value for Cosine Annealing Scheduler.')
 
-82 #T¿š 
+83 #T¿š 
 ·¿ms
 
 
-83 
+84 
 ·r£r
 .
 add_¬gum’t
@@ -8179,11 +8193,11 @@ add_¬gum’t
 ty³
 =,
 
-84 
+85 
 h–p
 ='Batch size forraining')
 
-85 
+86 
 ·r£r
 .
 add_¬gum’t
@@ -8191,11 +8205,11 @@ add_¬gum’t
 ty³
 =,
 
-86 
+87 
 h–p
 ='the‚umberƒpochs')
 
-87 
+88 
 ·r£r
 .
 add_¬gum’t
@@ -8203,11 +8217,11 @@ add_¬gum’t
 ty³
 =,
 
-88 
+89 
 h–p
 ='Number of workers used in dataloading')
 
-89 
+90 
 ·r£r
 .
 add_¬gum’t
@@ -8215,11 +8229,11 @@ add_¬gum’t
 ty³
 =,
 
-90 
+91 
 h–p
 ='the‚umberƒpochs')
 
-91 
+92 
 ·r£r
 .
 add_¬gum’t
@@ -8227,11 +8241,11 @@ add_¬gum’t
 ty³
 =,
 
-92 
+93 
 h–p
 ='Sethe debug†og output frequency.')
 
-93 
+94 
 ·r£r
 .
 add_¬gum’t
@@ -8243,21 +8257,21 @@ ty³
 ¡r2boŞ
 ,
 
-94 
+95 
 h–p
 ='Use CUDAorain model')
 
-96 
+97 
 ·r£r
 .
 add_¬gum’t
 ('--checkpoint_folder', ='models/',
 
-97 
+98 
 h–p
 ='Directory for saving checkpoint models')
 
-100 
+101 
 loggšg
 .
 basicCÚfig
@@ -8273,11 +8287,11 @@ sys
 INFO
 ,
 
-101 
+102 
 fÜm©
 ='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-102 
+103 
 ¬gs
  = 
 ·r£r
@@ -8285,7 +8299,7 @@ fÜm©
 	$·r£_¬gs
 ()
 
-103 
+104 
 DEVICE
  = 
 tÜch
@@ -8303,7 +8317,7 @@ cuda
 u£_cuda
  "cpu")
 
-105 
+106 
 ¬gs
 .
 u£_cuda
@@ -8317,7 +8331,7 @@ cuda
 	$is_avaabË
 ():
 
-106 
+107 
 tÜch
 .
 back’ds
@@ -8329,13 +8343,13 @@ b’chm¬k
 True
 
 
-107 
+108 
 loggšg
 .
 	`šfo
 ("Use Cuda.")
 
-110 
+111 
 def
  
 	`Œaš
@@ -8355,7 +8369,7 @@ debug_¡•s
 •och
 =-1):
 
-111 
+112 
 Ãt
 .
 	$Œaš
@@ -8363,27 +8377,27 @@ debug_¡•s
 True
 )
 
-112 
+113 
 ruÂšg_loss
  = 0.0
 
-113 
+114 
 ruÂšg_»g»ssiÚ_loss
  = 0.0
 
-114 
+115 
 ruÂšg_şassifiÿtiÚ_loss
  = 0.0
 
-115 #DISTANCE 
+116 #DISTANCE 
 CHANGE
 
 
-116 
+117 
 ruÂšg_di¡_»g_loss
  = 0.0
 
-117 
+118 
 i
 , 
 d©a
@@ -8395,11 +8409,11 @@ d©a
 lßd”
 ):
 
-118 #DISTANCE 
+119 #DISTANCE 
 CHANGE
 
 
-119 
+120 
 images
 , 
 boxes
@@ -8411,7 +8425,7 @@ gt_di¡
 d©a
 
 
-120 
+121 
 images
  = images.
 	$to
@@ -8419,7 +8433,7 @@ images
 deviû
 )
 
-121 
+122 
 boxes
  = boxes.
 	$to
@@ -8427,7 +8441,7 @@ boxes
 deviû
 )
 
-122 
+123 
 Ïb–s
  =†ab–s.
 	$to
@@ -8435,11 +8449,11 @@ deviû
 deviû
 )
 
-123 #DISTANCE 
+124 #DISTANCE 
 CHANGE
 
 
-124 
+125 
 gt_di¡
  = gt_di¡.
 	$to
@@ -8447,17 +8461,17 @@ gt_di¡
 deviû
 )
 
-126 
+127 
 İtimiz”
 .
 	$z”o_g¿d
 ()
 
-127 #DISTANCE 
+128 #DISTANCE 
 CHANGE
 
 
-128 
+129 
 cÚfid’û
 , 
 loÿtiÚs
@@ -8469,11 +8483,11 @@ loÿtiÚs
 images
 )
 
-129 #DISTANCE 
+130 #DISTANCE 
 CHANGE
 
 
-130 
+131 
 »g»ssiÚ_loss
 , 
 şassifiÿtiÚ_loss
@@ -8499,7 +8513,11 @@ CHANGE
 BOXES
 
 
-131 
+132 #DISTANCE 
+CHANGE
+
+
+133 
 loss
  = 
 »g»ssiÚ_loss
@@ -8509,19 +8527,19 @@ loss
 di¡_»g_loss
 
 
-132 
+134 
 loss
 .
 	$backw¬d
 ()
 
-133 
+135 
 İtimiz”
 .
 	$¡•
 ()
 
-135 
+137 
 ruÂšg_loss
  +ğ
 loss
@@ -8529,7 +8547,7 @@ loss
 	$™em
 ()
 
-136 
+138 
 ruÂšg_»g»ssiÚ_loss
  +ğ
 »g»ssiÚ_loss
@@ -8537,7 +8555,7 @@ ruÂšg_»g»ssiÚ_loss
 	$™em
 ()
 
-137 
+139 
 ruÂšg_şassifiÿtiÚ_loss
  +ğ
 şassifiÿtiÚ_loss
@@ -8545,7 +8563,11 @@ ruÂšg_şassifiÿtiÚ_loss
 	$™em
 ()
 
-138 
+140 #DISTANCE 
+CHANGE
+
+
+141 
 ruÂšg_di¡_»g_loss
  +ğ
 dis_»g_loss
@@ -8553,7 +8575,7 @@ dis_»g_loss
 	$™em
 ()
 
-139 
+142 
 i
  
 ªd
@@ -8561,7 +8583,7 @@ i
 debug_¡•s
  == 0:
 
-140 
+143 
 avg_loss
  = 
 ruÂšg_loss
@@ -8569,7 +8591,7 @@ ruÂšg_loss
 debug_¡•s
 
 
-141 
+144 
 avg_»g_loss
  = 
 ruÂšg_»g»ssiÚ_loss
@@ -8577,7 +8599,7 @@ ruÂšg_»g»ssiÚ_loss
 debug_¡•s
 
 
-142 
+145 
 avg_şf_loss
  = 
 ruÂšg_şassifiÿtiÚ_loss
@@ -8585,11 +8607,11 @@ ruÂšg_şassifiÿtiÚ_loss
 debug_¡•s
 
 
-143 #DISTANCE 
+146 #DISTANCE 
 CHANGE
 
 
-144 
+147 
 avg_di¡_»g_loss
  = 
 ruÂšg_di¡_»g_loss
@@ -8597,57 +8619,57 @@ ruÂšg_di¡_»g_loss
 debug_¡•s
 
 
-145 #DISTANCE 
+148 #DISTANCE 
 CHANGE
 
 
-146 
+149 
 loggšg
 .
 	`šfo
 (
 
-147 
+150 
 f
 "Epoch: {epoch}, Step: {i}, " +
 
-148 
+151 
 f
 "Average Loss: {avg_loss:.4f}, " +
 
-149 
+152 
 f
 "Average Regression Loss {avg_reg_loss:.4f}, " +
 
-150 
+153 
 f
 "Average Classification Loss: {avg_clf_loss:.4f}" +
 
-151 
+154 
 f
 "Average Distance Regression Loss: {avg_dist_reg_loss:.4f}"
 
-153 
+156 
 ruÂšg_loss
  = 0.0
 
-154 
+157 
 ruÂšg_»g»ssiÚ_loss
  = 0.0
 
-155 
+158 
 ruÂšg_şassifiÿtiÚ_loss
  = 0.0
 
-156 #DISTANCE 
+159 #DISTANCE 
 CHANGE
 
 
-157 
+160 
 ruÂšg_di¡_»g_loss
  = 0.0
 
-160 
+163 
 def
  
 	$‹¡
@@ -8661,37 +8683,37 @@ lßd”
 deviû
 ):
 
-161 
+164 
 Ãt
 .
 	$ev®
 ()
 
-162 
+165 
 ruÂšg_loss
  = 0.0
 
-163 
+166 
 ruÂšg_»g»ssiÚ_loss
  = 0.0
 
-164 
+167 
 ruÂšg_şassifiÿtiÚ_loss
  = 0.0
 
-165 #DISTANCE 
+168 #DISTANCE 
 CHANGE
 
 
-166 
+169 
 ruÂšg_di¡_»g_loss
  = 0.0
 
-167 
+170 
 num
  = 0
 
-168 
+171 
 _
 , 
 d©a
@@ -8703,7 +8725,11 @@ d©a
 lßd”
 ):
 
-169 
+172 #DISTANCE 
+CHANGE
+
+
+173 
 images
 , 
 boxes
@@ -8715,7 +8741,7 @@ gt_di¡
 d©a
 
 
-170 
+174 
 images
  = images.
 	$to
@@ -8723,7 +8749,7 @@ images
 deviû
 )
 
-171 
+175 
 boxes
  = boxes.
 	$to
@@ -8731,7 +8757,7 @@ boxes
 deviû
 )
 
-172 
+176 
 Ïb–s
  =†ab–s.
 	$to
@@ -8739,11 +8765,11 @@ deviû
 deviû
 )
 
-173 #DISTANCE 
+177 #DISTANCE 
 CHANGE
 
 
-174 
+178 
 gt_di¡
  = gt_di¡.
 	$to
@@ -8751,11 +8777,11 @@ gt_di¡
 deviû
 )
 
-175 
+179 
 num
  += 1
 
-177 
+181 
 w™h
  
 tÜch
@@ -8763,7 +8789,11 @@ tÜch
 	$no_g¿d
 ():
 
-178 
+182 #DISTANCE 
+CHANGE
+
+
+183 
 cÚfid’û
 , 
 loÿtiÚs
@@ -8775,7 +8805,7 @@ loÿtiÚs
 images
 )
 
-179 
+184 
 »g»ssiÚ_loss
 , 
 şassifiÿtiÚ_loss
@@ -8797,7 +8827,7 @@ boxes
 gt_di¡
 )
 
-180 
+185 
 loss
  = 
 »g»ssiÚ_loss
@@ -8807,7 +8837,7 @@ loss
 di¡_»g_loss
 
 
-182 
+187 
 ruÂšg_loss
  +ğ
 loss
@@ -8815,7 +8845,7 @@ loss
 	$™em
 ()
 
-183 
+188 
 ruÂšg_»g»ssiÚ_loss
  +ğ
 »g»ssiÚ_loss
@@ -8823,7 +8853,7 @@ ruÂšg_»g»ssiÚ_loss
 	$™em
 ()
 
-184 
+189 
 ruÂšg_şassifiÿtiÚ_loss
  +ğ
 şassifiÿtiÚ_loss
@@ -8831,7 +8861,11 @@ ruÂšg_şassifiÿtiÚ_loss
 	$™em
 ()
 
-185 
+190 #DISTANCE 
+CHANGE
+
+
+191 
 ruÂšg_di¡_»g_loss
  +ğ
 di¡_»g_loss
@@ -8839,7 +8873,7 @@ di¡_»g_loss
 	$™em
 ()
 
-186  
+192  
 ruÂšg_loss
  / 
 num
@@ -8851,17 +8885,17 @@ ruÂšg_şassifiÿtiÚ_loss
 ruÂšg_di¡_»g_loss
  /‚um
 
-189 
+195 
 __Çme__
  == '__main__':
 
-190 
+196 
 tim”
  = 
 	$Tim”
 ()
 
-192 
+198 
 loggšg
 .
 	$šfo
@@ -8869,62 +8903,22 @@ loggšg
 ¬gs
 )
 
-193 
+199 
 ¬gs
 .
 Ãt
  == 'vgg16-ssd':
 
-194 
+200 
 ü—‹_Ãt
  = 
 ü—‹_vgg_ssd
 
 
-195 
-cÚfig
- = 
-vgg_ssd_cÚfig
-
-
-196 
-–if
- 
-¬gs
-.
-Ãt
- == 'mb1-ssd':
-
-197 
-ü—‹_Ãt
- = 
-ü—‹_mob’‘v1_ssd
-
-
-198 
-cÚfig
- = 
-mob’‘v1_ssd_cÚfig
-
-
-199 
-–if
- 
-¬gs
-.
-Ãt
- == 'mb1-ssd-lite':
-
-200 
-ü—‹_Ãt
- = 
-ü—‹_mob’‘v1_ssd_l™e
-
-
 201 
 cÚfig
  = 
-mob’‘v1_ssd_cÚfig
+vgg_ssd_cÚfig
 
 
 202 
@@ -8933,18 +8927,18 @@ mob’‘v1_ssd_cÚfig
 ¬gs
 .
 Ãt
- == 'sq-ssd-lite':
+ == 'mb1-ssd':
 
 203 
 ü—‹_Ãt
  = 
-ü—‹_squ“z’‘_ssd_l™e
+ü—‹_mob’‘v1_ssd
 
 
 204 
 cÚfig
  = 
-squ“z’‘_ssd_cÚfig
+mob’‘v1_ssd_cÚfig
 
 
 205 
@@ -8953,9 +8947,49 @@ squ“z’‘_ssd_cÚfig
 ¬gs
 .
 Ãt
- == 'mb2-ssd-lite':
+ == 'mb1-ssd-lite':
 
 206 
+ü—‹_Ãt
+ = 
+ü—‹_mob’‘v1_ssd_l™e
+
+
+207 
+cÚfig
+ = 
+mob’‘v1_ssd_cÚfig
+
+
+208 
+–if
+ 
+¬gs
+.
+Ãt
+ == 'sq-ssd-lite':
+
+209 
+ü—‹_Ãt
+ = 
+ü—‹_squ“z’‘_ssd_l™e
+
+
+210 
+cÚfig
+ = 
+squ“z’‘_ssd_cÚfig
+
+
+211 
+–if
+ 
+¬gs
+.
+Ãt
+ == 'mb2-ssd-lite':
+
+212 
 ü—‹_Ãt
  = 
 Ïmbda
@@ -8973,19 +9007,19 @@ width_muÉ
 mb2_width_muÉ
 )
 
-207 
+213 
 cÚfig
  = 
 mob’‘v1_ssd_cÚfig
 
 
-209 
+215 
 loggšg
 .
 	`çl
 ("The‚etype is wrong.")
 
-210 
+216 
 ·r£r
 .
 	$´št_h–p
@@ -8995,13 +9029,13 @@ sys
 ¡d”r
 )
 
-211 
+217 
 sys
 .
 	$ex™
 (1)
 
-212 
+218 
 Œaš_ŒªsfÜm
  = 
 	$T¿šAugm’tiÚ
@@ -9015,7 +9049,7 @@ image_m—n
 image_¡d
 )
 
-213 
+219 
 rg‘_ŒªsfÜm
  = 
 	$M©chPriÜ
@@ -9027,13 +9061,13 @@ cÚfig
 ûÁ”_v¬Ÿnû
 ,
 
-214 
+220 
 cÚfig
 .
 size_v¬Ÿnû
 , 0.5)
 
-216 
+222 
 ‹¡_ŒªsfÜm
  = 
 	$Te¡T¿nsfÜm
@@ -9047,17 +9081,17 @@ image_m—n
 image_¡d
 )
 
-218 
+224 
 loggšg
 .
 	`šfo
 ("Prepareraining datasets.")
 
-219 
+225 
 d©a£ts
  = []
 
-220 
+226 
 d©a£t_·th
  
 š
@@ -9067,13 +9101,13 @@ d©a£t_·th
 d©a£ts
 :
 
-221 
+227 
 ¬gs
 .
 d©a£t_ty³
  == 'voc':
 
-222 
+228 
 d©a£t
  = 
 	$VOCD©a£t
@@ -9085,11 +9119,11 @@ d©a£t_·th
 Œaš_ŒªsfÜm
 ,
 
-223 
+229 
 rg‘_ŒªsfÜm
 =target_transform)
 
-224 
+230 
 Ïb–_fe
  = 
 os
@@ -9103,7 +9137,7 @@ os
 checkpošt_fŞd”
 , "voc-model-labels.txt")
 
-225 
+231 
 	$¡Üe_Ïb–s
 (
 Ïb–_fe
@@ -9113,7 +9147,7 @@ d©a£t
 şass_Çmes
 )
 
-226 
+232 
 num_şas£s
  = 
 	$Ën
@@ -9123,7 +9157,7 @@ d©a£t
 şass_Çmes
 )
 
-227 
+233 
 –if
  
 ¬gs
@@ -9131,7 +9165,7 @@ d©a£t
 d©a£t_ty³
  == 'open_images':
 
-228 
+234 
 d©a£t
  = 
 	`O³nImagesD©a£t
@@ -9139,7 +9173,7 @@ d©a£t
 d©a£t_·th
 ,
 
-229 
+235 
 ŒªsfÜm
 =
 Œaš_ŒªsfÜm
@@ -9147,7 +9181,7 @@ d©a£t_·th
 rg‘_ŒªsfÜm
 =target_transform,
 
-230 
+236 
 d©a£t_ty³
 ="Œaš", 
 b®ªû_d©a
@@ -9155,7 +9189,7 @@ b®ªû_d©a
 ¬gs
 .balance_data)
 
-231 
+237 
 Ïb–_fe
  = 
 os
@@ -9169,7 +9203,7 @@ os
 checkpošt_fŞd”
 , "open-images-model-labels.txt")
 
-232 
+238 
 	$¡Üe_Ïb–s
 (
 Ïb–_fe
@@ -9179,7 +9213,7 @@ d©a£t
 şass_Çmes
 )
 
-233 
+239 
 loggšg
 .
 	$šfo
@@ -9187,7 +9221,7 @@ loggšg
 d©a£t
 )
 
-234 
+240 
 num_şas£s
  = 
 	$Ën
@@ -9197,7 +9231,73 @@ d©a£t
 şass_Çmes
 )
 
-237 
+241 #DISTANCE 
+CHANGE
+
+
+242 
+–if
+ 
+¬gs
+.
+d©a£t_ty³
+ =='how_far_am_i':
+
+243 
+d©a£t
+ = 
+	`HowF¬AmID©a£t
+(
+d©a£t_·th
+,
+
+244 
+ŒªsfÜm
+=
+Œaš_ŒªsfÜm
+, 
+rg‘_ŒªsfÜm
+=target_transform,
+
+245 
+d©a£t_ty³
+="train")
+
+246 
+Ïb–_fe
+ = 
+os
+.
+·th
+.
+	`još
+(
+¬gs
+.
+checkpošt_fŞd”
+, "howfarami-model-labels.txt")
+
+247 
+	$¡Üe_Ïb–s
+(
+Ïb–_fe
+, 
+d©a£t
+.
+şass_Çmes
+)
+
+248 
+num_şas£s
+ = 
+	$Ën
+(
+d©a£t
+.
+şass_Çmes
+)
+
+251 
 ¿i£
  
 	`V®ueE¼Ü
@@ -9205,7 +9305,7 @@ d©a£t
 f
 "Datasetpye {args.dataset_type} is‚ot supported.")
 
-238 
+252 
 d©a£ts
 .
 	$­³nd
@@ -9213,7 +9313,7 @@ d©a£ts
 d©a£t
 )
 
-239 
+253 
 loggšg
 .
 	`šfo
@@ -9221,7 +9321,7 @@ loggšg
 f
 "Stored†abels into file {label_file}.")
 
-240 
+254 
 Œaš_d©a£t
  = 
 	$CÚÿtD©a£t
@@ -9229,7 +9329,7 @@ f
 d©a£ts
 )
 
-241 
+255 
 loggšg
 .
 	`šfo
@@ -9241,118 +9341,12 @@ loggšg
 Œaš_d©a£t
 )))
 
-242 
+256 
 Œaš_lßd”
  = 
 	$D©aLßd”
 (
 Œaš_d©a£t
-, 
-¬gs
-.
-b©ch_size
-,
-
-243 
-num_wÜk”s
-=
-¬gs
-.num_workers,
-
-244 
-shufæe
-=
-True
-)
-
-245 
-loggšg
-.
-	`šfo
-("Prepare Validation datasets.")
-
-246 
-¬gs
-.
-d©a£t_ty³
- == "voc":
-
-247 
-v®_d©a£t
- = 
-	$VOCD©a£t
-(
-¬gs
-.
-v®id©iÚ_d©a£t
-, 
-ŒªsfÜm
-=
-‹¡_ŒªsfÜm
-,
-
-248 
-rg‘_ŒªsfÜm
-ñ¬g‘_ŒªsfÜm, 
-is_‹¡
-=
-True
-)
-
-249 
-–if
- 
-¬gs
-.
-d©a£t_ty³
- == 'open_images':
-
-250 
-v®_d©a£t
- = 
-	`O³nImagesD©a£t
-(
-d©a£t_·th
-,
-
-251 
-ŒªsfÜm
-=
-‹¡_ŒªsfÜm
-, 
-rg‘_ŒªsfÜm
-=target_transform,
-
-252 
-d©a£t_ty³
-="test")
-
-253 
-loggšg
-.
-	$šfo
-(
-v®_d©a£t
-)
-
-254 
-loggšg
-.
-	`šfo
-("v®id©iÚ d©a£ˆsize: {}".
-	`fÜm©
-(
-	$Ën
-(
-v®_d©a£t
-)))
-
-256 
-v®_lßd”
- = 
-	$D©aLßd”
-(
-v®_d©a£t
 , 
 ¬gs
 .
@@ -9368,16 +9362,122 @@ num_wÜk”s
 258 
 shufæe
 =
-F®£
+True
 )
 
 259 
 loggšg
 .
 	`šfo
+("Prepare Validation datasets.")
+
+260 
+¬gs
+.
+d©a£t_ty³
+ == "voc":
+
+261 
+v®_d©a£t
+ = 
+	$VOCD©a£t
+(
+¬gs
+.
+v®id©iÚ_d©a£t
+, 
+ŒªsfÜm
+=
+‹¡_ŒªsfÜm
+,
+
+262 
+rg‘_ŒªsfÜm
+ñ¬g‘_ŒªsfÜm, 
+is_‹¡
+=
+True
+)
+
+263 
+–if
+ 
+¬gs
+.
+d©a£t_ty³
+ == 'open_images':
+
+264 
+v®_d©a£t
+ = 
+	`O³nImagesD©a£t
+(
+d©a£t_·th
+,
+
+265 
+ŒªsfÜm
+=
+‹¡_ŒªsfÜm
+, 
+rg‘_ŒªsfÜm
+=target_transform,
+
+266 
+d©a£t_ty³
+="test")
+
+267 
+loggšg
+.
+	$šfo
+(
+v®_d©a£t
+)
+
+268 
+loggšg
+.
+	`šfo
+("v®id©iÚ d©a£ˆsize: {}".
+	`fÜm©
+(
+	$Ën
+(
+v®_d©a£t
+)))
+
+270 
+v®_lßd”
+ = 
+	$D©aLßd”
+(
+v®_d©a£t
+, 
+¬gs
+.
+b©ch_size
+,
+
+271 
+num_wÜk”s
+=
+¬gs
+.num_workers,
+
+272 
+shufæe
+=
+F®£
+)
+
+273 
+loggšg
+.
+	`šfo
 ("Build‚etwork.")
 
-260 
+274 
 Ãt
  = 
 	$ü—‹_Ãt
@@ -9385,15 +9485,15 @@ loggšg
 num_şas£s
 )
 
-261 
+275 
 mš_loss
  = -10000.0
 
-262 
+276 
 Ï¡_•och
  = -1
 
-264 
+278 
 ba£_Ãt_Ì
  = 
 ¬gs
@@ -9407,7 +9507,7 @@ NÚe
 Ì
 
 
-265 
+279 
 exŒa_Ïy”s_Ì
  = 
 ¬gs
@@ -9421,19 +9521,19 @@ NÚe
 Ì
 
 
-266 
+280 
 ¬gs
 .
 ä“ze_ba£_Ãt
 :
 
-267 
+281 
 loggšg
 .
 	`šfo
 ("Freeze base‚et.")
 
-268 
+282 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9441,7 +9541,7 @@ loggšg
 ba£_Ãt
 )
 
-269 
+283 
 ·¿ms
  = 
 ™”toŞs
@@ -9457,7 +9557,7 @@ sourû_Ïy”_add_Ús
 exŒas
 .parameters(),
 
-270 
+284 
 Ãt
 .
 »g»ssiÚ_h—d”s
@@ -9469,17 +9569,17 @@ exŒas
 	$·¿m‘”s
 ())
 
-271 
+285 
 ·¿ms
  = [
 
-272 {'·¿ms': 
+286 {'·¿ms': 
 ™”toŞs
 .
 	`chaš
 (
 
-273 
+287 
 Ãt
 .
 sourû_Ïy”_add_Ús
@@ -9487,7 +9587,7 @@ sourû_Ïy”_add_Ús
 	`·¿m‘”s
 (),
 
-274 
+288 
 Ãt
 .
 exŒas
@@ -9495,17 +9595,17 @@ exŒas
 	`·¿m‘”s
 ()
 
-275 ), 'Ì': 
+289 ), 'Ì': 
 exŒa_Ïy”s_Ì
 },
 
-276 {'·¿ms': 
+290 {'·¿ms': 
 ™”toŞs
 .
 chaš
 (
 
-277 
+291 
 Ãt
 .
 »g»ssiÚ_h—d”s
@@ -9513,7 +9613,7 @@ chaš
 ·¿m‘”s
 (),
 
-278 
+292 
 Ãt
 .
 şassifiÿtiÚ_h—d”s
@@ -9521,7 +9621,7 @@ chaš
 ·¿m‘”s
 ()
 
-281 
+295 
 –if
  
 	g¬gs
@@ -9529,7 +9629,7 @@ chaš
 	gä“ze_Ãt
 :
 
-282 
+296 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9537,7 +9637,7 @@ chaš
 ba£_Ãt
 )
 
-283 
+297 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9545,7 +9645,7 @@ ba£_Ãt
 sourû_Ïy”_add_Ús
 )
 
-284 
+298 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9553,7 +9653,7 @@ sourû_Ïy”_add_Ús
 exŒas
 )
 
-285 
+299 
 ·¿ms
  = 
 ™”toŞs
@@ -9571,17 +9671,17 @@ exŒas
 	$·¿m‘”s
 ())
 
-286 
+300 
 loggšg
 .
 	`šfo
 ("Freeze‡llhe†ayersƒxcept…rediction heads.")
 
-288 
+302 
 ·¿ms
  = [
 
-289 {'·¿ms': 
+303 {'·¿ms': 
 Ãt
 .
 ba£_Ãt
@@ -9591,13 +9691,13 @@ ba£_Ãt
 ba£_Ãt_Ì
 },
 
-290 {'·¿ms': 
+304 {'·¿ms': 
 ™”toŞs
 .
 chaš
 (
 
-291 
+305 
 Ãt
 .
 sourû_Ïy”_add_Ús
@@ -9605,7 +9705,7 @@ sourû_Ïy”_add_Ús
 ·¿m‘”s
 (),
 
-292 
+306 
 Ãt
 .
 exŒas
@@ -9613,17 +9713,17 @@ exŒas
 ·¿m‘”s
 ()
 
-293 ), 'Ì': 
+307 ), 'Ì': 
 exŒa_Ïy”s_Ì
 },
 
-294 {'·¿ms': 
+308 {'·¿ms': 
 ™”toŞs
 .
 chaš
 (
 
-295 
+309 
 Ãt
 .
 »g»ssiÚ_h—d”s
@@ -9631,7 +9731,7 @@ chaš
 ·¿m‘”s
 (),
 
-296 
+310 
 Ãt
 .
 şassifiÿtiÚ_h—d”s
@@ -9639,19 +9739,19 @@ chaš
 ·¿m‘”s
 ()
 
-300 
+314 
 	gtim”
 .
 ¡¬t
 ("Load Model")
 
-301 
+315 
 	g¬gs
 .
 	g»sume
 :
 
-302 
+316 
 loggšg
 .
 šfo
@@ -9659,7 +9759,7 @@ loggšg
 f
 "Resume fromhe model {args.resume}")
 
-303 
+317 
 Ãt
 .
 	$lßd
@@ -9669,7 +9769,7 @@ f
 »sume
 )
 
-304 
+318 
 –if
  
 ¬gs
@@ -9677,7 +9777,7 @@ f
 ba£_Ãt
 :
 
-305 
+319 
 loggšg
 .
 	`šfo
@@ -9685,7 +9785,7 @@ loggšg
 f
 "Init from base‚et {args.base_net}")
 
-306 
+320 
 Ãt
 .
 	$š™_äom_ba£_Ãt
@@ -9695,7 +9795,7 @@ f
 ba£_Ãt
 )
 
-307 
+321 
 –if
  
 ¬gs
@@ -9703,7 +9803,7 @@ ba£_Ãt
 ´‘¿šed_ssd
 :
 
-308 
+322 
 loggšg
 .
 	`šfo
@@ -9711,7 +9811,7 @@ loggšg
 f
 "Init from…retrained ssd {args.pretrained_ssd}")
 
-309 
+323 
 Ãt
 .
 	$š™_äom_´‘¿šed_ssd
@@ -9721,7 +9821,7 @@ f
 ´‘¿šed_ssd
 )
 
-310 
+324 
 loggšg
 .
 	`šfo
@@ -9729,7 +9829,7 @@ loggšg
 f
 'Took {timer.end("Load Model"):.2f} secondso†oadhe model.')
 
-312 
+326 
 Ãt
 .
 	$to
@@ -9737,7 +9837,7 @@ f
 DEVICE
 )
 
-314 
+328 
 ü™”iÚ
  = 
 	$MuÉiboxLoss
@@ -9751,7 +9851,7 @@ iou_th»shŞd
 Ãg_pos_¿tio
 =3,
 
-315 
+329 
 ûÁ”_v¬Ÿnû
 =0.1, 
 size_v¬Ÿnû
@@ -9761,7 +9861,7 @@ deviû
 DEVICE
 )
 
-316 
+330 
 İtimiz”
  = 
 tÜch
@@ -9779,13 +9879,13 @@ tÜch
 mom’tum
 =args.momentum,
 
-317 
+331 
 weight_deÿy
 =
 ¬gs
 .weight_decay)
 
-318 
+332 
 loggšg
 .
 	`šfo
@@ -9793,23 +9893,23 @@ loggšg
 f
 "Learning„ate: {args.lr}, Base‚et†earning„ate: {base_net_lr}, "
 
-319 + 
+333 + 
 f
 "Extra Layers†earning„ate: {extra_layers_lr}.")
 
-321 
+335 
 ¬gs
 .
 scheduËr
  == 'multi-step':
 
-322 
+336 
 loggšg
 .
 	`šfo
 ("Uses MultiStepLR scheduler.")
 
-323 
+337 
 me¡Úes
  = [(
 v
@@ -9827,7 +9927,7 @@ me¡Úes
 	`¥l™
 (",")]
 
-324 
+338 
 scheduËr
  = 
 	$MuÉiS‹pLR
@@ -9837,13 +9937,13 @@ scheduËr
 me¡Úes
 =milestones,
 
-325 
+339 
 gamma
 =0.1, 
 Ï¡_•och
 =last_epoch)
 
-326 
+340 
 –if
  
 ¬gs
@@ -9851,13 +9951,13 @@ gamma
 scheduËr
  == 'cosine':
 
-327 
+341 
 loggšg
 .
 	`šfo
 ("Uses CosineAnnealingLR scheduler.")
 
-328 
+342 
 scheduËr
  = 
 	$CosšeAÂ—lšgLR
@@ -9871,7 +9971,7 @@ t_max
 Ï¡_•och
 =last_epoch)
 
-330 
+344 
 loggšg
 .
 	`çl
@@ -9879,7 +9979,7 @@ loggšg
 f
 "Unsupported Scheduler: {args.scheduler}.")
 
-331 
+345 
 ·r£r
 .
 	$´št_h–p
@@ -9889,13 +9989,13 @@ sys
 ¡d”r
 )
 
-332 
+346 
 sys
 .
 	$ex™
 (1)
 
-334 
+348 
 loggšg
 .
 	`šfo
@@ -9903,7 +10003,7 @@ loggšg
 f
 "Startraining fromƒpoch {last_epoch + 1}.")
 
-335 
+349 
 •och
  
 š
@@ -9917,13 +10017,13 @@ f
 num_•ochs
 ):
 
-336 
+350 
 scheduËr
 .
 	$¡•
 ()
 
-337 
+351 
 	$Œaš
 (
 Œaš_lßd”
@@ -9935,7 +10035,7 @@ scheduËr
 İtimiz”
 ,
 
-338 
+352 
 deviû
 =
 DEVICE
@@ -9947,7 +10047,7 @@ debug_¡•s
 •och
 =epoch)
 
-340 
+354 
 •och
  % 
 ¬gs
@@ -9959,12 +10059,18 @@ v®id©iÚ_•ochs
 num_•ochs
  - 1:
 
-341 
+355 #DISTANCE 
+CHANGE
+
+
+356 
 v®_loss
 , 
 v®_»g»ssiÚ_loss
 , 
 v®_şassifiÿtiÚ_loss
+, 
+v®_di¡_»g_loss
  = 
 	$‹¡
 (
@@ -9977,29 +10083,37 @@ v®_lßd”
 DEVICE
 )
 
-342 
+357 
 loggšg
 .
 	`šfo
 (
 
-343 
+358 
 f
 "Epoch: {epoch}, " +
 
-344 
+359 
 f
 "Validation Loss: {val_loss:.4f}, " +
 
-345 
+360 
 f
 "Validation Regression Loss {val_regression_loss:.4f}, " +
 
-346 
+361 
 f
 "Validation Classification Loss: {val_classification_loss:.4f}"
 
-348 
+362 #DISTANCE 
+CHANGE
+
+
+363 
+f
+"Validation Distance Reg Loss: {val_dist_reg_loss:.4f}"
+
+365 
 mod–_·th
  = 
 os
@@ -10015,7 +10129,7 @@ checkpošt_fŞd”
 f
 "{args.net}-Epoch-{epoch}-Loss-{val_loss}.pth")
 
-349 
+366 
 Ãt
 .
 	$§ve
@@ -10023,7 +10137,7 @@ f
 mod–_·th
 )
 
-350 
+367 
 loggšg
 .
 	`šfo
@@ -10925,7 +11039,7 @@ d©a£t_ty³
 	$low”
 ()
 
-17 
+16 
 £lf
 .
 d©a
@@ -10937,7 +11051,7 @@ d©a
 	$_»ad_d©a
 ()
 
-18 
+17 
 £lf
 .
 ids
@@ -10949,7 +11063,7 @@ ids
 d©a
 ]
 
-21 
+20 
 def
  
 	$_g‘™em
@@ -10959,7 +11073,7 @@ def
 šdex
 ):
 
-22 
+21 
 image_šfo
  = 
 £lf
@@ -10969,7 +11083,7 @@ d©a
 šdex
 ]
 
-23 
+22 
 image
  = 
 £lf
@@ -10979,31 +11093,55 @@ image
 image_šfo
 ['image_id'])
 
-24 
+23 
 boxes
  = 
+Å
+.
+	`¬¿y
+(
 image_šfo
-['boxes']
+['boxes'], 
+dty³
+òp.
+æßt32
+)
 
-25 
+24 
 Ïb–s
  = 
+Å
+.
+	`¬¿y
+(
 image_šfo
-['labels']
+['Ïb–s'], 
+dty³
+òp.
+št64
+)
 
-26 
+25 
 di¡ªûs
  = 
+Å
+.
+	`¬¿y
+(
 image_šfo
-['distances']
+['di¡ªûs'], 
+dty³
+=
+æßt32
+)
 
-27 
+26 
 £lf
 .
 ŒªsfÜm
 :
 
-28 
+27 
 image
 , 
 boxes
@@ -11021,16 +11159,18 @@ boxes
 Ïb–s
 )
 
-29 
+28 
 £lf
 .
 rg‘_ŒªsfÜm
 :
 
-30 
+29 
 boxes
 , 
 Ïb–s
+, 
+di¡ªûs
  = 
 £lf
 .
@@ -11039,9 +11179,11 @@ boxes
 boxes
 , 
 Ïb–s
+, 
+di¡ªûs
 )
 
-31  
+30  
 image_šfo
 ['image_id'], 
 image
@@ -11053,7 +11195,7 @@ boxes
 di¡ªûs
 
 
-33 
+32 
 def
  
 	$__g‘™em__
@@ -11063,7 +11205,7 @@ def
 šdex
 ):
 
-34 
+33 
 _
 , 
 image
@@ -11081,7 +11223,7 @@ di¡ªûs
 šdex
 )
 
-35  
+34  
 image
 , 
 boxes
@@ -11091,65 +11233,7 @@ boxes
 di¡ªûs
 
 
-37 
-def
- 
-	$g‘_ªnÙ©iÚ
-(
-£lf
-, 
-šdex
-):
-
-39 
-image_id
-, 
-image
-, 
-boxes
-, 
-Ïb–s
-, 
-di¡ªûs
- = 
-£lf
-.
-	$_g‘™em
-(
-šdex
-)
-
-40 
-is_difficuÉ
- = 
-Å
-.
-	$z”os
-(
-boxes
-.
-sh­e
-[0], 
-dty³
-=
-Å
-.
-ušt8
-)
-
-41  
-image_id
-, (
-boxes
-, 
-Ïb–s
-, 
-is_difficuÉ
-, 
-di¡ªûs
-)
-
-43 
+36 
 def
  
 	$g‘_image
@@ -11159,7 +11243,7 @@ def
 šdex
 ):
 
-44 
+37 
 image_šfo
  = 
 £lf
@@ -11169,7 +11253,7 @@ d©a
 šdex
 ]
 
-45 
+38 
 image
  = 
 £lf
@@ -11179,13 +11263,13 @@ image
 image_šfo
 ['image_id'])
 
-46 
+39 
 £lf
 .
 ŒªsfÜm
 :
 
-47 
+40 
 image
 , 
 _
@@ -11197,11 +11281,11 @@ _
 image
 )
 
-48  
+41  
 image
 
 
-50 
+43 
 def
  
 	$_»ad_d©a
@@ -11209,13 +11293,13 @@ def
 £lf
 ):
 
-51 
+44 
 ªnÙ©iÚ_fe
  = 
 f
-"{self.root}/{self.dataset_type}-annotations-bbox.json"
+"{self.root}/{self.dataset_type}_labels.json"
 
-52 
+45 
 ªnÙ©iÚs
  = 
 jsÚ
@@ -11225,17 +11309,17 @@ jsÚ
 ªnÙ©iÚ_fe
 )
 
-53 
+46 
 şass_Çmes
  = ['BACKGROUND', 'person']
 
-54 
+47 
 şass_diù
  = {'BACKGROUND': 0, '³rsÚ': 15
 	}
 }
 
-55 
+48 
 w™h
  
 İ’
@@ -11247,7 +11331,7 @@ as
 	ga_fe
 :
 
-56 
+49 
 d©a
  = 
 jsÚ
@@ -11257,7 +11341,7 @@ jsÚ
 a_fe
 )
 
-57  
+50  
 d©a
 , 
 şass_Çmes
@@ -11265,7 +11349,7 @@ d©a
 şass_diù
 
 
-59 
+52 
 def
  
 	$__Ën__
@@ -11273,7 +11357,7 @@ def
 £lf
 ):
 
-60  
+53  
 	$Ën
 (
 £lf
@@ -11281,7 +11365,7 @@ def
 d©a
 )
 
-62 
+55 
 def
  
 	$_»ad_image
@@ -11291,7 +11375,7 @@ def
 image_id
 ):
 
-63 
+56 
 image_fe
  = 
 £lf
@@ -11303,7 +11387,7 @@ d©a£t_ty³
 f
 "{image_id}.jpg"
 
-64 
+57 
 image
  = 
 cv2
@@ -11315,13 +11399,13 @@ cv2
 image_fe
 ))
 
-65 
+58 
 image
 .
 sh­e
 [2] == 1:
 
-66 
+59 
 image
  = 
 cv2
@@ -11335,7 +11419,7 @@ cv2
 COLOR_GRAY2RGB
 )
 
-68 
+61 
 image
  = 
 cv2
@@ -11349,7 +11433,7 @@ cv2
 COLOR_BGR2RGB
 )
 
-69  
+62  
 image
 
 
@@ -14932,8 +15016,10 @@ tÜch
 
 
 6 
-	gäom
- ..
+äom
+ 
+	ga
+.
 uts
  
 impÜt
@@ -15359,7 +15445,7 @@ num_pos
 şassifiÿtiÚ_loss
 /num_pos, 
 l2_loss
-
+/num_pos
 
 	@vision/nn/scaled_l2_norm.py
 
@@ -21299,13 +21385,21 @@ ex·nd_¿tio
 ex·nd_¿tio
 =0.25)
 
+38 #DISTANCE 
+CHANGE
+
+
 39 
+num_di¡_chªÃls
+ = 1
+
+41 
 »g»ssiÚ_h—d”s
  = 
 	`ModuËLi¡
 ([
 
-40 
+42 
 	`S•”abËCÚv2d
 (
 š_chªÃls
@@ -21317,7 +21411,7 @@ width_muÉ
 out_chªÃls
 =6 * 4,
 
-41 
+43 
 k”Ãl_size
 =3, 
 ·ddšg
@@ -21327,7 +21421,7 @@ k”Ãl_size
 F®£
 ),
 
-42 
+44 
 	`S•”abËCÚv2d
 (
 š_chªÃls
@@ -21343,7 +21437,7 @@ k”Ãl_size
 F®£
 ),
 
-43 
+45 
 	`S•”abËCÚv2d
 (
 š_chªÃls
@@ -21359,39 +21453,39 @@ k”Ãl_size
 F®£
 ),
 
-44 
-	`S•”abËCÚv2d
-(
-š_chªÃls
-=256, 
-out_chªÃls
-=6 * 4, 
-k”Ãl_size
-=3, 
-·ddšg
-=1, 
-Únx_com·tibË
-=
-F®£
-),
-
-45 
-	`S•”abËCÚv2d
-(
-š_chªÃls
-=256, 
-out_chªÃls
-=6 * 4, 
-k”Ãl_size
-=3, 
-·ddšg
-=1, 
-Únx_com·tibË
-=
-F®£
-),
-
 46 
+	`S•”abËCÚv2d
+(
+š_chªÃls
+=256, 
+out_chªÃls
+=6 * 4, 
+k”Ãl_size
+=3, 
+·ddšg
+=1, 
+Únx_com·tibË
+=
+F®£
+),
+
+47 
+	`S•”abËCÚv2d
+(
+š_chªÃls
+=256, 
+out_chªÃls
+=6 * 4, 
+k”Ãl_size
+=3, 
+·ddšg
+=1, 
+Únx_com·tibË
+=
+F®£
+),
+
+48 
 	`CÚv2d
 (
 š_chªÃls
@@ -21401,15 +21495,7 @@ out_chªÃls
 k”Ãl_size
 =1),
 
-47 #DISTANCE 
-CHANGE
-
-
 49 
-num_di¡_chªÃls
- = 1
-
-50 
 	`S•”abËCÚv2d
 (
 š_chªÃls
@@ -21423,7 +21509,7 @@ out_chªÃls
 num_di¡_chªÃls
 ,
 
-51 
+50 
 k”Ãl_size
 =3, 
 ·ddšg
@@ -21432,6 +21518,10 @@ k”Ãl_size
 =
 F®£
 ),
+
+51 #DISTANCE 
+CHANGE
+
 
 52 
 	`S•”abËCÚv2d
@@ -21448,7 +21538,7 @@ k”Ãl_size
 =1, 
 Únx_com·tibË
 =
-F®£
+True
 ),
 
 53 
@@ -21466,7 +21556,7 @@ k”Ãl_size
 =1, 
 Únx_com·tibË
 =
-F®£
+True
 ),
 
 54 
@@ -21484,7 +21574,7 @@ k”Ãl_size
 =1, 
 Únx_com·tibË
 =
-F®£
+True
 ),
 
 55 
@@ -21502,7 +21592,7 @@ k”Ãl_size
 =1, 
 Únx_com·tibË
 =
-F®£
+True
 ),
 
 56 
@@ -25204,8 +25294,6 @@ CHANGE
 
 178 #boxes, 
 Ïb–s
-, 
-di¡ªûs
  = 
 box_uts
 .
@@ -26826,7 +26914,15 @@ boxes
 height
 
 
-104  
+103 #DISTANCE 
+CHANGE
+
+
+104 
+boxes
+[boxes > 1.0] = 1.0
+
+106  
 image
 , 
 boxes
@@ -26834,7 +26930,7 @@ boxes
 Ïb–s
 
 
-107 
+109 
 şass
  
 	$Resize
@@ -26842,7 +26938,7 @@ boxes
 objeù
 ):
 
-108 
+110 
 def
  
 	$__š™__
@@ -26852,13 +26948,13 @@ def
 size
 =300):
 
-109 
+111 
 £lf
 .
 size
  = size
 
-111 
+113 
 def
  
 	$__ÿÎ__
@@ -26874,7 +26970,7 @@ NÚe
 Ïb–s
 =None):
 
-112 
+114 
 image
  = 
 cv2
@@ -26886,13 +26982,13 @@ cv2
 size
 ,
 
-113 
+115 
 £lf
 .
 size
 ))
 
-114  
+116  
 image
 , 
 boxes
@@ -26900,7 +26996,7 @@ boxes
 Ïb–s
 
 
-117 
+119 
 şass
  
 	$RªdomS©u¿tiÚ
@@ -26908,7 +27004,7 @@ boxes
 objeù
 ):
 
-118 
+120 
 def
  
 	$__š™__
@@ -26920,19 +27016,19 @@ low”
 uµ”
 =1.5):
 
-119 
+121 
 £lf
 .
 low”
  =†ower
 
-120 
+122 
 £lf
 .
 uµ”
  = upper
 
-121 
+123 
 as£¹
  
 £lf
@@ -26942,7 +27038,7 @@ uµ”
 low”
 , "contrast upper must be >=†ower."
 
-122 
+124 
 as£¹
  
 £lf
@@ -26950,7 +27046,7 @@ as£¹
 low”
  >= 0, "contrast†ower must be‚on-negative."
 
-124 
+126 
 def
  
 	$__ÿÎ__
@@ -26966,13 +27062,13 @@ NÚe
 Ïb–s
 =None):
 
-125 
+127 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-126 
+128 
 image
 [:, :, 1] *ğ
 ¿ndom
@@ -26986,7 +27082,7 @@ low”
 uµ”
 )
 
-128  
+130  
 image
 , 
 boxes
@@ -26994,7 +27090,7 @@ boxes
 Ïb–s
 
 
-131 
+133 
 şass
  
 	$RªdomHue
@@ -27002,7 +27098,7 @@ boxes
 objeù
 ):
 
-132 
+134 
 def
  
 	$__š™__
@@ -27012,7 +27108,7 @@ def
 d–
 =18.0):
 
-133 
+135 
 as£¹
  
 d–
@@ -27020,13 +27116,13 @@ d–
 ªd
  delta <= 360.0
 
-134 
+136 
 £lf
 .
 d–
  = delta
 
-136 
+138 
 def
  
 	$__ÿÎ__
@@ -27042,13 +27138,13 @@ NÚe
 Ïb–s
 =None):
 
-137 
+139 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-138 
+140 
 image
 [:, :, 0] +ğ
 ¿ndom
@@ -27060,15 +27156,15 @@ image
 d–
 , self.delta)
 
-139 
+141 
 image
 [:, :, 0][image[:, :, 0] > 360.0] -= 360.0
 
-140 
+142 
 image
 [:, :, 0][image[:, :, 0] < 0.0] += 360.0
 
-141  
+143  
 image
 , 
 boxes
@@ -27076,7 +27172,7 @@ boxes
 Ïb–s
 
 
-144 
+146 
 şass
  
 	$RªdomLightšgNoi£
@@ -27084,7 +27180,7 @@ boxes
 objeù
 ):
 
-145 
+147 
 def
  
 	$__š™__
@@ -27092,13 +27188,13 @@ def
 £lf
 ):
 
-146 
+148 
 £lf
 .
 ³rms
  = ((0, 1, 2), (0, 2, 1),
 
-150 
+152 
 def
  
 	$__ÿÎ__
@@ -27114,13 +27210,13 @@ NÚe
 Ïb–s
 =None):
 
-151 
+153 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-152 
+154 
 sw­
  = 
 £lf
@@ -27134,7 +27230,7 @@ sw­
 	`Ën
 (self.perms))]
 
-153 
+155 
 shufæe
  = 
 	$Sw­ChªÃls
@@ -27144,7 +27240,7 @@ sw­
 chªÃls
 
 
-154 
+156 
 image
  = 
 	$shufæe
@@ -27152,7 +27248,7 @@ image
 image
 )
 
-155  
+157  
 image
 , 
 boxes
@@ -27160,7 +27256,7 @@ boxes
 Ïb–s
 
 
-158 
+160 
 şass
  
 	$CÚv”tCŞÜ
@@ -27168,7 +27264,7 @@ boxes
 objeù
 ):
 
-159 
+161 
 def
  
 	$__š™__
@@ -27180,19 +27276,19 @@ cu¼’t
 ŒªsfÜm
 ):
 
-160 
+162 
 £lf
 .
 ŒªsfÜm
  =ransform
 
-161 
+163 
 £lf
 .
 cu¼’t
  = current
 
-163 
+165 
 def
  
 	$__ÿÎ__
@@ -27208,37 +27304,11 @@ NÚe
 Ïb–s
 =None):
 
-164 
+166 
 £lf
 .
 cu¼’t
  =ğ'BGR' 
-ªd
- s–f.
-ŒªsfÜm
- == 'HSV':
-
-165 
-image
- = 
-cv2
-.
-	$cvtCŞÜ
-(
-image
-, 
-cv2
-.
-COLOR_BGR2HSV
-)
-
-166 
-–if
- 
-£lf
-.
-cu¼’t
- =ğ'RGB' 
 ªd
  s–f.
 ŒªsfÜm
@@ -27255,10 +27325,36 @@ image
 , 
 cv2
 .
-COLOR_RGB2HSV
+COLOR_BGR2HSV
 )
 
 168 
+–if
+ 
+£lf
+.
+cu¼’t
+ =ğ'RGB' 
+ªd
+ s–f.
+ŒªsfÜm
+ == 'HSV':
+
+169 
+image
+ = 
+cv2
+.
+	$cvtCŞÜ
+(
+image
+, 
+cv2
+.
+COLOR_RGB2HSV
+)
+
+170 
 –if
  
 £lf
@@ -27270,7 +27366,7 @@ cu¼’t
 ŒªsfÜm
  == 'RGB':
 
-169 
+171 
 image
  = 
 cv2
@@ -27284,7 +27380,7 @@ cv2
 COLOR_BGR2RGB
 )
 
-170 
+172 
 –if
  
 £lf
@@ -27296,7 +27392,7 @@ cu¼’t
 ŒªsfÜm
  == 'BGR':
 
-171 
+173 
 image
  = 
 cv2
@@ -27310,7 +27406,7 @@ cv2
 COLOR_HSV2BGR
 )
 
-172 
+174 
 –if
  
 £lf
@@ -27322,7 +27418,7 @@ cu¼’t
 ŒªsfÜm
  == "RGB":
 
-173 
+175 
 image
  = 
 cv2
@@ -27336,13 +27432,13 @@ cv2
 COLOR_HSV2RGB
 )
 
-175 
+177 
 ¿i£
  
 NÙIm¶em’‹dE¼Ü
 
 
-176  
+178  
 image
 , 
 boxes
@@ -27350,7 +27446,7 @@ boxes
 Ïb–s
 
 
-179 
+181 
 şass
  
 	$RªdomCÚŒa¡
@@ -27358,7 +27454,7 @@ boxes
 objeù
 ):
 
-180 
+182 
 def
  
 	$__š™__
@@ -27370,19 +27466,19 @@ low”
 uµ”
 =1.5):
 
-181 
+183 
 £lf
 .
 low”
  =†ower
 
-182 
+184 
 £lf
 .
 uµ”
  = upper
 
-183 
+185 
 as£¹
  
 £lf
@@ -27392,7 +27488,7 @@ uµ”
 low”
 , "contrast upper must be >=†ower."
 
-184 
+186 
 as£¹
  
 £lf
@@ -27400,11 +27496,11 @@ as£¹
 low”
  >= 0, "contrast†ower must be‚on-negative."
 
-186 #ex³ù 
+188 #ex³ù 
 image
 
 
-187 
+189 
 def
  
 	$__ÿÎ__
@@ -27420,13 +27516,13 @@ NÚe
 Ïb–s
 =None):
 
-188 
+190 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-189 
+191 
 ®pha
  = 
 ¿ndom
@@ -27440,13 +27536,13 @@ low”
 uµ”
 )
 
-190 
+192 
 image
  *ğ
 ®pha
 
 
-191  
+193  
 image
 , 
 boxes
@@ -27454,7 +27550,7 @@ boxes
 Ïb–s
 
 
-194 
+196 
 şass
  
 	$RªdomBrighŠess
@@ -27462,7 +27558,7 @@ boxes
 objeù
 ):
 
-195 
+197 
 def
  
 	$__š™__
@@ -27472,25 +27568,25 @@ def
 d–
 =32):
 
-196 
+198 
 as£¹
  
 d–
  >= 0.0
 
-197 
+199 
 as£¹
  
 d–
  <= 255.0
 
-198 
+200 
 £lf
 .
 d–
  = delta
 
-200 
+202 
 def
  
 	$__ÿÎ__
@@ -27506,13 +27602,13 @@ NÚe
 Ïb–s
 =None):
 
-201 
+203 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-202 
+204 
 d–
  = 
 ¿ndom
@@ -27522,13 +27618,13 @@ d–
 £lf
 .delta, self.delta)
 
-203 
+205 
 image
  +ğ
 d–
 
 
-204  
+206  
 image
 , 
 boxes
@@ -27536,7 +27632,7 @@ boxes
 Ïb–s
 
 
-207 
+209 
 şass
  
 	$ToCV2Image
@@ -27544,7 +27640,7 @@ boxes
 objeù
 ):
 
-208 
+210 
 def
  
 	$__ÿÎ__
@@ -27560,7 +27656,7 @@ NÚe
 Ïb–s
 =None):
 
-209  
+211  
 ‹nsÜ
 .
 	`ıu
@@ -27580,7 +27676,7 @@ boxes
 Ïb–s
 
 
-212 
+214 
 şass
  
 	$ToT’sÜ
@@ -27588,7 +27684,7 @@ boxes
 objeù
 ):
 
-213 
+215 
 def
  
 	$__ÿÎ__
@@ -27604,7 +27700,7 @@ NÚe
 Ïb–s
 =None):
 
-214  
+216  
 tÜch
 .
 	`äom_numpy
@@ -27624,7 +27720,7 @@ boxes
 Ïb–s
 
 
-217 
+219 
 şass
  
 	$RªdomSam¶eCrİ
@@ -27632,11 +27728,11 @@ boxes
 objeù
 ):
 
-219 
+221 
 Argum’ts
 :
 
-220 
+222 
 	$img
  (
 Image
@@ -27654,7 +27750,7 @@ duršg
 Œaššg
 
 
-221 
+223 
 	$boxes
  (
 T’sÜ
@@ -27674,7 +27770,7 @@ boxes
 fÜm
 
 
-222 
+224 
 	$Ïb–s
  (
 T’sÜ
@@ -27690,7 +27786,7 @@ the
 bbox
 
 
-223 
+225 
 	$mode
  (
 tu¶e
@@ -27708,11 +27804,11 @@ jacÿrd
 ov”Ïps
 
 
-224 
+226 
 R‘uº
 :
 
-225 (
+227 (
 img
 , 
 boxes
@@ -27720,7 +27816,7 @@ boxes
 şas£s
 )
 
-226 
+228 
 	$img
  (
 Image
@@ -27732,7 +27828,7 @@ the
 image
 
 
-227 
+229 
 	$boxes
  (
 T’sÜ
@@ -27752,7 +27848,7 @@ boxes
 fÜm
 
 
-228 
+230 
 	$Ïb–s
  (
 T’sÜ
@@ -27768,7 +27864,7 @@ the
 bbox
 
 
-230 
+232 
 def
  
 	$__š™__
@@ -27776,13 +27872,13 @@ def
 £lf
 ):
 
-231 
+233 
 £lf
 .
 §m¶e_İtiÚs
  = (
 
-232 #usšg 
+234 #usšg 
 ’tœe
  
 Üigš®
@@ -27792,11 +27888,11 @@ def
 image
 
 
-233 
+235 
 NÚe
 ,
 
-234 #§m¶
+236 #§m¶
 a
  
 ·tch
@@ -27816,23 +27912,23 @@ obj
 š
  .1,.3,.4,.7,.9
 
-235 (0.1, 
+237 (0.1, 
 NÚe
 ),
 
-236 (0.3, 
+238 (0.3, 
 NÚe
 ),
 
-237 (0.7, 
+239 (0.7, 
 NÚe
 ),
 
-238 (0.9, 
+240 (0.9, 
 NÚe
 ),
 
-239 #¿ndomly 
+241 #¿ndomly 
 §m¶e
  
 a
@@ -27840,11 +27936,11 @@ a
 ·tch
 
 
-240 (
+242 (
 NÚe
 , None),
 
-243 
+245 
 def
  
 	$__ÿÎ__
@@ -27860,7 +27956,7 @@ NÚe
 Ïb–s
 =None):
 
-244 
+246 
 height
 , 
 width
@@ -27872,11 +27968,11 @@ image
 sh­e
 
 
-245 
+247 
 True
 :
 
-246 #¿ndomly 
+248 #¿ndomly 
 choo£
  
 a
@@ -27884,7 +27980,7 @@ a
 mode
 
 
-247 
+249 
 mode
  = 
 ¿ndom
@@ -27896,7 +27992,7 @@ mode
 §m¶e_İtiÚs
 )
 
-248 
+250 
 mode
  
 is
@@ -27904,7 +28000,7 @@ is
 NÚe
 :
 
-249  
+251  
 image
 , 
 boxes
@@ -27912,7 +28008,7 @@ boxes
 Ïb–s
 
 
-251 
+253 
 mš_iou
 , 
 max_iou
@@ -27920,20 +28016,8 @@ max_iou
 mode
 
 
-252 
-mš_iou
- 
-is
- 
-NÚe
-:
-
-253 
-mš_iou
- = ('-inf')
-
 254 
-max_iou
+mš_iou
  
 is
  
@@ -27941,14 +28025,26 @@ NÚe
 :
 
 255 
+mš_iou
+ = ('-inf')
+
+256 
+max_iou
+ 
+is
+ 
+NÚe
+:
+
+257 
 max_iou
  = ('inf')
 
-257 #max 
+259 #max 
 	`Œas
  (50)
 
-258 
+260 
 _
  
 š
@@ -27956,13 +28052,13 @@ _
 	$¿nge
 (50):
 
-259 
+261 
 cu¼’t_image
  = 
 image
 
 
-261 
+263 
 w
  = 
 ¿ndom
@@ -27972,7 +28068,7 @@ w
 width
 , width)
 
-262 
+264 
 h
  = 
 ¿ndom
@@ -27982,7 +28078,7 @@ h
 height
 , height)
 
-264 #a¥eù 
+266 #a¥eù 
 ¿tio
  
 cÚ¡¿št
@@ -27992,7 +28088,7 @@ b
 t
  .5 & 2
 
-265 
+267 
 h
  / 
 w
@@ -28000,7 +28096,7 @@ w
 Ü
  h / w > 2:
 
-268 
+270 
 Ëá
  = 
 ¿ndom
@@ -28012,7 +28108,7 @@ width
 w
 )
 
-269 
+271 
 tİ
  = 
 ¿ndom
@@ -28024,7 +28120,7 @@ height
 h
 )
 
-271 #cÚv”ˆ
+273 #cÚv”ˆ
 to
  
 š‹g”
@@ -28040,7 +28136,7 @@ x2
 y2
 
 
-272 
+274 
 »ù
  = 
 Å
@@ -28056,7 +28152,7 @@ w
 h
 )])
 
-274 #ÿlcuÏ‹ 
+276 #ÿlcuÏ‹ 
 	`IoU
  (
 jacÿrd
@@ -28078,7 +28174,7 @@ gt
 boxes
 
 
-275 
+277 
 ov”Ïp
  = 
 	$jacÿrd_numpy
@@ -28088,7 +28184,7 @@ boxes
 »ù
 )
 
-277 #i 
+279 #i 
 mš
  
 ªd
@@ -28108,7 +28204,7 @@ nÙ
 agaš
 
 
-278 
+280 
 ov”Ïp
 .
 	`mš
@@ -28122,7 +28218,7 @@ max_iou
 	$max
 ():
 
-281 #cuˆ
+283 #cuˆ
 the
  
 üİ
@@ -28132,13 +28228,13 @@ the
 image
 
 
-282 
+284 
 cu¼’t_image
  = cu¼’t_image[
 »ù
 [1]:rect[3],„ect[0]:rect[2],
 
-285 #k“°
+287 #k“°
 ov”Ïp
  
 w™h
@@ -28158,13 +28254,13 @@ IF
 ·tch
 
 
-286 
+288 
 ûÁ”s
  = (
 boxes
 [:, :2] + boxes[:, 2:]) / 2.0
 
-288 #mask 
+290 #mask 
 š
  
 ®l
@@ -28190,7 +28286,7 @@ of
 ûÁ”s
 
 
-289 
+291 
 m1
  = (
 »ù
@@ -28198,7 +28294,7 @@ m1
 ûÁ”s
 [:, 0]) * (rect[1] < centers[:, 1])
 
-291 #mask 
+293 #mask 
 š
  
 ®l
@@ -28224,7 +28320,7 @@ of
 ûÁ”s
 
 
-292 
+294 
 m2
  = (
 »ù
@@ -28232,7 +28328,7 @@ m2
 ûÁ”s
 [:, 0]) * (rect[3] > centers[:, 1])
 
-294 #mask 
+296 #mask 
 š
  
 th©
@@ -28250,7 +28346,7 @@ m2
 Œue
 
 
-295 
+297 
 mask
  = 
 m1
@@ -28258,7 +28354,7 @@ m1
 m2
 
 
-297 #hav
+299 #hav
 ªy
  
 v®id
@@ -28272,7 +28368,7 @@ agaš
 nÙ
 
 
-298 
+300 
 nÙ
  
 mask
@@ -28280,7 +28376,7 @@ mask
 	$ªy
 ():
 
-301 #k
+303 #k
 Úly
  
 m©chšg
@@ -28290,7 +28386,7 @@ gt
 boxes
 
 
-302 
+304 
 cu¼’t_boxes
  = 
 boxes
@@ -28300,7 +28396,7 @@ mask
 	$cİy
 ()
 
-304 #k
+306 #k
 Úly
  
 m©chšg
@@ -28310,7 +28406,7 @@ gt
 Ïb–s
 
 
-305 
+307 
 cu¼’t_Ïb–s
  = 
 Ïb–s
@@ -28318,7 +28414,7 @@ cu¼’t_Ïb–s
 mask
 ]
 
-307 #should 
+309 #should 
 we
  
 u£
@@ -28340,7 +28436,7 @@ cÜÃr
 üİ
 's
 
-308 
+310 
 cu¼’t_boxes
 [:, :2] = 
 Å
@@ -28350,11 +28446,11 @@ cu¼’t_boxes
 cu¼’t_boxes
 [:, :2],
 
-309 
+311 
 »ù
 [:2])
 
-310 #adju¡ 
+312 #adju¡ 
 to
  
 	`üİ
@@ -28366,13 +28462,13 @@ sub¡¿ùšg
 üİ
 's†eft,top)
 
-311 
+313 
 cu¼’t_boxes
 [:, :2] -ğ
 »ù
 [:2]
 
-313 
+315 
 cu¼’t_boxes
 [:, 2:] = 
 Å
@@ -28382,11 +28478,11 @@ cu¼’t_boxes
 cu¼’t_boxes
 [:, 2:],
 
-314 
+316 
 »ù
 [2:])
 
-315 #adju¡ 
+317 #adju¡ 
 to
  
 	`üİ
@@ -28398,13 +28494,13 @@ sub¡¿ùšg
 üİ
 's†eft,top)
 
-316 
+318 
 cu¼’t_boxes
 [:, 2:] -ğ
 »ù
 [:2]
 
-318  
+320  
 cu¼’t_image
 , 
 cu¼’t_boxes
@@ -28412,7 +28508,7 @@ cu¼’t_boxes
 cu¼’t_Ïb–s
 
 
-321 
+323 
 şass
  
 	$Ex·nd
@@ -28420,7 +28516,7 @@ cu¼’t_Ïb–s
 objeù
 ):
 
-322 
+324 
 def
  
 	$__š™__
@@ -28430,13 +28526,13 @@ def
 m—n
 ):
 
-323 
+325 
 £lf
 .
 m—n
  = mean
 
-325 
+327 
 def
  
 	$__ÿÎ__
@@ -28450,13 +28546,13 @@ boxes
 Ïb–s
 ):
 
-326 
+328 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-327  
+329  
 image
 , 
 boxes
@@ -28464,7 +28560,7 @@ boxes
 Ïb–s
 
 
-329 
+331 
 height
 , 
 width
@@ -28476,7 +28572,7 @@ image
 sh­e
 
 
-330 
+332 
 ¿tio
  = 
 ¿ndom
@@ -28484,7 +28580,7 @@ sh­e
 	$unifÜm
 (1, 4)
 
-331 
+333 
 Ëá
  = 
 ¿ndom
@@ -28496,7 +28592,7 @@ width
 ¿tio
  - width)
 
-332 
+334 
 tİ
  = 
 ¿ndom
@@ -28508,7 +28604,7 @@ height
 ¿tio
  - height)
 
-334 
+336 
 ex·nd_image
  = 
 Å
@@ -28516,7 +28612,7 @@ ex·nd_image
 	`z”os
 (
 
-335 ((
+337 ((
 height
 *
 ¿tio
@@ -28526,13 +28622,13 @@ width
 d•th
 ),
 
-336 
+338 
 dty³
 =
 image
 .dtype)
 
-337 
+339 
 ex·nd_image
 [:, :, :] = 
 £lf
@@ -28540,7 +28636,7 @@ ex·nd_image
 m—n
 
 
-338 
+340 
 ex·nd_image
 [(
 tİ
@@ -28548,7 +28644,7 @@ tİ
 height
 ),
 
-339 (
+341 (
 Ëá
 ):Öeá + 
 width
@@ -28556,19 +28652,19 @@ width
 image
 
 
-340 
+342 
 image
  = 
 ex·nd_image
 
 
-342 
+344 
 boxes
  = boxes.
 	$cİy
 ()
 
-343 
+345 
 boxes
 [:, :2] +ğ((
 Ëá
@@ -28576,7 +28672,7 @@ boxes
 tİ
 ))
 
-344 
+346 
 boxes
 [:, 2:] +ğ((
 Ëá
@@ -28584,7 +28680,7 @@ boxes
 tİ
 ))
 
-346  
+348  
 image
 , 
 boxes
@@ -28592,7 +28688,7 @@ boxes
 Ïb–s
 
 
-349 
+351 
 şass
  
 	$RªdomMœrÜ
@@ -28600,7 +28696,7 @@ boxes
 objeù
 ):
 
-350 
+352 
 def
  
 	$__ÿÎ__
@@ -28614,7 +28710,7 @@ boxes
 şas£s
 ):
 
-351 
+353 
 _
 , 
 width
@@ -28624,29 +28720,29 @@ image
 sh­e
 
 
-352 
+354 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-353 
+355 
 image
  = image[:, ::-1]
 
-354 
+356 
 boxes
  = boxes.
 	$cİy
 ()
 
-355 
+357 
 boxes
 [:, 0::2] = 
 width
  - boxes[:, 2::-2]
 
-356  
+358  
 image
 , 
 boxes
@@ -28654,7 +28750,7 @@ boxes
 şas£s
 
 
-359 
+361 
 şass
  
 	$Sw­ChªÃls
@@ -28662,7 +28758,7 @@ boxes
 objeù
 ):
 
-361 
+363 
 ¥ecif›d
  
 š
@@ -28674,11 +28770,11 @@ sw­
 tu¶e
 .
 
-362 
+364 
 Args
 :
 
-363 
+365 
 	$sw­s
  (
 ŒË
@@ -28692,11 +28788,11 @@ of
 chªÃls
 
 
-364 
+366 
 eg
 : (2, 1, 0)
 
-367 
+369 
 def
  
 	$__š™__
@@ -28706,13 +28802,13 @@ def
 sw­s
 ):
 
-368 
+370 
 £lf
 .
 sw­s
  = swaps
 
-370 
+372 
 def
  
 	$__ÿÎ__
@@ -28722,11 +28818,11 @@ def
 image
 ):
 
-372 
+374 
 Args
 :
 
-373 
+375 
 	$image
  (
 T’sÜ
@@ -28742,11 +28838,11 @@ be
 ŒªsfÜmed
 
 
-374 
+376 
 R‘uº
 :
 
-375 
+377 
 a
  
 ‹nsÜ
@@ -28764,7 +28860,7 @@ to
 sw­
 
 
-377 #ià
+379 #ià
 tÜch
 .
 	`is_‹nsÜ
@@ -28772,7 +28868,7 @@ tÜch
 image
 ):
 
-378 #imagğ
+380 #imagğ
 image
 .
 d©a
@@ -28782,7 +28878,7 @@ d©a
 	`numpy
 ()
 
-380 #imagğ
+382 #imagğ
 Å
 .
 	`¬¿y
@@ -28790,7 +28886,7 @@ d©a
 image
 )
 
-381 
+383 
 image
  = image[:, :, 
 £lf
@@ -28798,11 +28894,11 @@ image
 sw­s
 ]
 
-382  
+384  
 image
 
 
-385 
+387 
 şass
  
 	$PhÙom‘ricDi¡Üt
@@ -28810,7 +28906,7 @@ image
 objeù
 ):
 
-386 
+388 
 def
  
 	$__š™__
@@ -28818,17 +28914,17 @@ def
 £lf
 ):
 
-387 
+389 
 £lf
 .
 pd
  = [
 
-388 
+390 
 	`RªdomCÚŒa¡
 (), #RGB
 
-389 
+391 
 	`CÚv”tCŞÜ
 (
 cu¼’t
@@ -28836,15 +28932,15 @@ cu¼’t
 ŒªsfÜm
 ='HSV'), #HSV
 
-390 
+392 
 	`RªdomS©u¿tiÚ
 (), #HSV
 
-391 
+393 
 	`RªdomHue
 (), #HSV
 
-392 
+394 
 	`CÚv”tCŞÜ
 (
 cu¼’t
@@ -28852,11 +28948,11 @@ cu¼’t
 ŒªsfÜm
 ='RGB'), #RGB
 
-393 
+395 
 	$RªdomCÚŒa¡
 () #RGB
 
-395 
+397 
 £lf
 .
 ¿nd_brighŠess
@@ -28864,7 +28960,7 @@ cu¼’t
 	$RªdomBrighŠess
 ()
 
-396 
+398 
 £lf
 .
 ¿nd_light_noi£
@@ -28872,7 +28968,7 @@ cu¼’t
 	$RªdomLightšgNoi£
 ()
 
-398 
+400 
 def
  
 	$__ÿÎ__
@@ -28886,7 +28982,7 @@ boxes
 Ïb–s
 ):
 
-399 
+401 
 im
  = 
 image
@@ -28894,7 +28990,7 @@ image
 	$cİy
 ()
 
-400 
+402 
 im
 , 
 boxes
@@ -28912,13 +29008,13 @@ boxes
 Ïb–s
 )
 
-401 
+403 
 ¿ndom
 .
 	$¿ndšt
 (2):
 
-402 
+404 
 di¡Üt
  = 
 	`Compo£
@@ -28928,7 +29024,7 @@ di¡Üt
 pd
 [:-1])
 
-404 
+406 
 di¡Üt
  = 
 	$Compo£
@@ -28938,7 +29034,7 @@ di¡Üt
 pd
 [1:])
 
-405 
+407 
 im
 , 
 boxes
@@ -28954,7 +29050,7 @@ boxes
 Ïb–s
 )
 
-406  
+408  
 £lf
 .
 	`¿nd_light_noi£
