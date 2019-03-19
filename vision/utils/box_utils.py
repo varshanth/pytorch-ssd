@@ -182,7 +182,7 @@ def assign_priors(gt_boxes, gt_labels, gt_dist, corner_form_priors,
     labels[best_target_per_prior < iou_threshold] = 0  # the backgournd id
     boxes = gt_boxes[best_target_per_prior_index]
     # DISTANCE CHANGE
-    distances = gt_distances[best_target_per_prior_index]
+    distances = gt_dist[best_target_per_prior_index]
     distances[best_target_per_prior < iou_threshold] = 0
     return boxes, labels, distances
 

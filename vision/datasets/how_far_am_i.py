@@ -21,8 +21,8 @@ class HowFarAmIDataset:
         image_info = self.data[index]
         image = self._read_image(image_info['image_id'])
         boxes = np.array(image_info['boxes'], dtype=np.float32)
-        labels = np.array(image_info['labels'], dtype=np.int64)
-        distances = np.array(image_info['distances'], dtype=float32)
+        labels = np.array([self.class_dict[label] for label in image_info['labels']], dtype=np.int64)
+        distances = np.array(image_info['distances'], dtype=np.float32)
         if self.transform:
             image, boxes, labels = self.transform(image, boxes, labels)
         if self.target_transform:
@@ -42,7 +42,6 @@ class HowFarAmIDataset:
 
     def _read_data(self):
         annotation_file = f"{self.root}/{self.dataset_type}_labels.json"
-        annotations = json.load(annotation_file)
         class_names = ('BACKGROUND',
             'aeroplane', 'bicycle', 'bird', 'boat',
             'bottle', 'bus', 'car', 'cat', 'chair',
@@ -50,7 +49,7 @@ class HowFarAmIDataset:
             'motorbike', 'person', 'pottedplant',
             'sheep', 'sofa', 'train', 'tvmonitor'
         )
-        class_dict = {class_name: i for i, class_name in enumerate(self.class_names)}
+        class_dict = {class_name: i for i, class_name in enumerate(class_names)}
         with open(annotation_file, 'r') as a_file:
             data = json.load(a_file)
         return data, class_names, class_dict
