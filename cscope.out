@@ -1,4 +1,4 @@
-cscope 15 $HOME/Downloads/pytorch-ssd               0000173709
+cscope 15 $HOME/Downloads/pytorch-ssd               0000174355
 	@convert_to_caffe2_models.py
 
 1 
@@ -8570,7 +8570,7 @@ CHANGE
 141 
 ruÂšg_di¡_»g_loss
  +ğ
-dis_»g_loss
+di¡_»g_loss
 .
 	$™em
 ()
@@ -11175,21 +11175,43 @@ di¡ªûs
 Å
 .
 	`¬¿y
-(
+([[
+di¡ªû
+/450.0] di¡ªû 
+š
+ 
 image_šfo
-['di¡ªûs'], 
+['di¡ªûs']], 
 dty³
 òp.
 æßt32
 )
 
-26 
+26 
+	`´št
+(
+f
+"Image = {image_info['image_id']}")
+
+27 
+	`´št
+(
+f
+"Distances shape beforeransform {distances.shape}")
+
+28 
+	`´št
+(
+f
+"boxes shape beforeransform {boxes.shape}")
+
+29 
 £lf
 .
 ŒªsfÜm
 :
 
-27 
+30 
 image
 , 
 boxes
@@ -11207,13 +11229,13 @@ boxes
 Ïb–s
 )
 
-28 
+31 
 £lf
 .
 rg‘_ŒªsfÜm
 :
 
-29 
+32 
 boxes
 , 
 Ïb–s
@@ -11231,7 +11253,19 @@ boxes
 di¡ªûs
 )
 
-30  
+33 
+	`´št
+(
+f
+"Distances shape‡fterransform {distances.shape}")
+
+34 
+	`´št
+(
+f
+"boxes shape beforeransform {boxes.shape}")
+
+35  
 image_šfo
 ['image_id'], 
 image
@@ -11243,7 +11277,7 @@ boxes
 di¡ªûs
 
 
-32 
+37 
 def
  
 	$__g‘™em__
@@ -11253,7 +11287,7 @@ def
 šdex
 ):
 
-33 
+38 
 _
 , 
 image
@@ -11271,7 +11305,7 @@ di¡ªûs
 šdex
 )
 
-34  
+39  
 image
 , 
 boxes
@@ -11281,7 +11315,7 @@ boxes
 di¡ªûs
 
 
-36 
+41 
 def
  
 	$g‘_image
@@ -11291,7 +11325,7 @@ def
 šdex
 ):
 
-37 
+42 
 image_šfo
  = 
 £lf
@@ -11301,7 +11335,7 @@ d©a
 šdex
 ]
 
-38 
+43 
 image
  = 
 £lf
@@ -11311,13 +11345,13 @@ image
 image_šfo
 ['image_id'])
 
-39 
+44 
 £lf
 .
 ŒªsfÜm
 :
 
-40 
+45 
 image
 , 
 _
@@ -11329,11 +11363,11 @@ _
 image
 )
 
-41  
+46  
 image
 
 
-43 
+48 
 def
  
 	$_»ad_d©a
@@ -11341,17 +11375,17 @@ def
 £lf
 ):
 
-44 
+49 
 ªnÙ©iÚ_fe
  = 
 f
 "{self.root}/{self.dataset_type}_labels.json"
 
-45 
+50 
 şass_Çmes
  = ('BACKGROUND',
 
-52 
+57 
 şass_diù
  = {
 şass_Çme
@@ -11367,7 +11401,7 @@ i
 	}
 }
 
-53 
+58 
 w™h
  
 İ’
@@ -11379,7 +11413,7 @@ as
 	ga_fe
 :
 
-54 
+59 
 d©a
  = 
 jsÚ
@@ -11389,7 +11423,7 @@ jsÚ
 a_fe
 )
 
-55  
+60  
 d©a
 , 
 şass_Çmes
@@ -11397,7 +11431,7 @@ d©a
 şass_diù
 
 
-57 
+62 
 def
  
 	$__Ën__
@@ -11405,7 +11439,7 @@ def
 £lf
 ):
 
-58  
+63  
 	$Ën
 (
 £lf
@@ -11413,7 +11447,7 @@ def
 d©a
 )
 
-60 
+65 
 def
  
 	$_»ad_image
@@ -11423,7 +11457,7 @@ def
 image_id
 ):
 
-61 
+66 
 image_fe
  = 
 £lf
@@ -11435,7 +11469,7 @@ d©a£t_ty³
 f
 "{image_id}.jpg"
 
-62 
+67 
 image
  = 
 cv2
@@ -11447,13 +11481,13 @@ cv2
 image_fe
 ))
 
-63 
+68 
 image
 .
 sh­e
 [2] == 1:
 
-64 
+69 
 image
  = 
 cv2
@@ -11467,7 +11501,7 @@ cv2
 COLOR_GRAY2RGB
 )
 
-66 
+71 
 image
  = 
 cv2
@@ -11481,7 +11515,7 @@ cv2
 COLOR_BGR2RGB
 )
 
-67  
+72  
 image
 
 
@@ -15447,30 +15481,42 @@ size_av”age
 F®£
 )
 
-53 
-	`´št
-(
-f
-"pred†oc shape {predicted_locations.shape} gt†oc shape {gt_locations.shape}")
-
-54 #DISTANCE 
+53 #DISTANCE 
 CHANGE
 
 
+54 
+³rsÚ_mask
+ = 
+Ïb–s
+ == 15
+
 55 
-´ed_di¡
- =…»d_di¡[
-pos_mask
+	`´št
+(
+f
+"Number of…eople: {torch.sum(person_mask)}")
+
+56 
+gt_di¡
+ = gt_di¡[
+³rsÚ_mask
 , :].
 	`»sh­e
 (-1, 1)
 
-56 
-l2_loss
- = 
+57 
+´ed_di¡
+ =…»d_di¡[
+³rsÚ_mask
+, :].
+	`»sh­e
+(-1, 1)
+
+58 #l2_los ğ
 F
 .
-	$m£_loss
+	`m£_loss
 (
 ´ed_di¡
 , 
@@ -15481,7 +15527,23 @@ size_av”age
 F®£
 )
 
-58 
+59 
+di¡_l1_loss
+ = 
+F
+.
+	$smoÙh_l1_loss
+(
+´ed_di¡
+, 
+gt_di¡
+, 
+size_av”age
+=
+F®£
+)
+
+61 
 num_pos
  = 
 gt_loÿtiÚs
@@ -15489,7 +15551,21 @@ gt_loÿtiÚs
 	$size
 (0)
 
-59  
+62 
+num_³rsÚ
+ = 
+gt_di¡
+.
+	$size
+(0)
+
+63 
+	`´št
+(
+f
+"DEBUG:‡vg†1†oss {dist_l1_loss}")
+
+64 #»tuº 
 smoÙh_l1_loss
 /
 num_pos
@@ -15498,6 +15574,18 @@ num_pos
 /num_pos, 
 l2_loss
 /num_pos
+
+65  
+smoÙh_l1_loss
+/
+num_pos
+, 
+şassifiÿtiÚ_loss
+/num_pos, 
+di¡_l1_loss
+/
+num_³rsÚ
+
 
 	@vision/nn/scaled_l2_norm.py
 

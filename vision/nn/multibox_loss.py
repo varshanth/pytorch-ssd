@@ -52,11 +52,14 @@ class MultiboxLoss(nn.Module):
 
         # DISTANCE CHANGE
         person_mask = labels == 15
-        print(f"Number of people: {torch.sum(person_mask)}")
+        #print(f"Number of people: {torch.sum(person_mask)}")
         gt_dist = gt_dist[person_mask, :].reshape(-1, 1)
         pred_dist = pred_dist[person_mask, :].reshape(-1, 1)
-        l2_loss = F.mse_loss(pred_dist, gt_dist, size_average=False)
+        #l2_loss = F.mse_loss(pred_dist, gt_dist, size_average=False)
+        dist_l1_loss = F.smooth_l1_loss(pred_dist, gt_dist, size_average=False)
 
         num_pos = gt_locations.size(0)
-        print(f"DEBUG: avg l2 loss {l2_loss}")
-        return smooth_l1_loss/num_pos, classification_loss/num_pos, l2_loss/num_pos
+        num_person = gt_dist.size(0)
+        #print(f"DEBUG: avg l1 loss {dist_l1_loss/num_person}")
+        #return smooth_l1_loss/num_pos, classification_loss/num_pos, l2_loss/num_pos
+        return smooth_l1_loss/num_pos, classification_loss/num_pos, dist_l1_loss/num_person
