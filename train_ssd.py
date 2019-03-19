@@ -265,6 +265,11 @@ if __name__ == '__main__':
                                         transform=test_transform, target_transform=target_transform,
                                         dataset_type="test")
         logging.info(val_dataset)
+    else args.dataset_type == 'how_far_am_i':
+        val_dataset = HowFarAmIDataset(dataset_path,
+                transform=test_transform, target_transform=target_transform,
+                dataset_type="test")
+
     logging.info("validation dataset size: {}".format(len(val_dataset)))
 
     val_loader = DataLoader(val_dataset, args.batch_size,

@@ -43,8 +43,14 @@ class HowFarAmIDataset:
     def _read_data(self):
         annotation_file = f"{self.root}/{self.dataset_type}_labels.json"
         annotations = json.load(annotation_file)
-        class_names = ['BACKGROUND', 'person']
-        class_dict = {'BACKGROUND': 0, 'person': 15}
+        class_names = ('BACKGROUND',
+            'aeroplane', 'bicycle', 'bird', 'boat',
+            'bottle', 'bus', 'car', 'cat', 'chair',
+            'cow', 'diningtable', 'dog', 'horse',
+            'motorbike', 'person', 'pottedplant',
+            'sheep', 'sofa', 'train', 'tvmonitor'
+        )
+        class_dict = {class_name: i for i, class_name in enumerate(self.class_names)}
         with open(annotation_file, 'r') as a_file:
             data = json.load(a_file)
         return data, class_names, class_dict
