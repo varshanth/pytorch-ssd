@@ -23,10 +23,14 @@ class HowFarAmIDataset:
         boxes = np.array(image_info['boxes'], dtype=np.float32)
         labels = np.array([self.class_dict[label] for label in image_info['labels']], dtype=np.int64)
         distances = np.array(image_info['distances'], dtype=np.float32)
+        print(f"Distances shape before transform {distances.shape}")
+        print(f"boxes shape before transform {boxes.shape}")
         if self.transform:
             image, boxes, labels = self.transform(image, boxes, labels)
         if self.target_transform:
             boxes, labels, distances = self.target_transform(boxes, labels, distances)
+        print(f"Distances shape after transform {distances.shape}")
+        print(f"boxes shape before transform {boxes.shape}")
         return image_info['image_id'], image, boxes, labels, distances
 
     def __getitem__(self, index):

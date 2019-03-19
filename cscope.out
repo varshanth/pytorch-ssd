@@ -1,4 +1,4 @@
-cscope 15 $HOME/Downloads/pytorch-ssd               0000173527
+cscope 15 $HOME/Downloads/pytorch-ssd               0000173709
 	@convert_to_caffe2_models.py
 
 1 
@@ -9435,13 +9435,19 @@ loggšg
 v®_d©a£t
 )
 
-268 
+268 #DISTANCE 
+CHANGE
+
+
+269 
+–if
+ 
 ¬gs
 .
 d©a£t_ty³
  == 'how_far_am_i':
 
-269 
+270 
 v®_d©a£t
  = 
 	`HowF¬AmID©a£t
@@ -9449,7 +9455,7 @@ v®_d©a£t
 d©a£t_·th
 ,
 
-270 
+271 
 ŒªsfÜm
 =
 ‹¡_ŒªsfÜm
@@ -9457,11 +9463,19 @@ d©a£t_·th
 rg‘_ŒªsfÜm
 =target_transform,
 
-271 
+272 
 d©a£t_ty³
 ="test")
 
-273 
+274 
+¿i£
+ 
+	`V®ueE¼Ü
+(
+f
+"Datasetpye {args.dataset_type} is‚ot supported.")
+
+276 
 loggšg
 .
 	`šfo
@@ -9473,7 +9487,7 @@ loggšg
 v®_d©a£t
 )))
 
-275 
+278 
 v®_lßd”
  = 
 	$D©aLßd”
@@ -9485,25 +9499,25 @@ v®_d©a£t
 b©ch_size
 ,
 
-276 
+279 
 num_wÜk”s
 =
 ¬gs
 .num_workers,
 
-277 
+280 
 shufæe
 =
 F®£
 )
 
-278 
+281 
 loggšg
 .
 	`šfo
 ("Build‚etwork.")
 
-279 
+282 
 Ãt
  = 
 	$ü—‹_Ãt
@@ -9511,15 +9525,15 @@ loggšg
 num_şas£s
 )
 
-280 
+283 
 mš_loss
  = -10000.0
 
-281 
+284 
 Ï¡_•och
  = -1
 
-283 
+286 
 ba£_Ãt_Ì
  = 
 ¬gs
@@ -9533,7 +9547,7 @@ NÚe
 Ì
 
 
-284 
+287 
 exŒa_Ïy”s_Ì
  = 
 ¬gs
@@ -9547,19 +9561,19 @@ NÚe
 Ì
 
 
-285 
+288 
 ¬gs
 .
 ä“ze_ba£_Ãt
 :
 
-286 
+289 
 loggšg
 .
 	`šfo
 ("Freeze base‚et.")
 
-287 
+290 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9567,7 +9581,7 @@ loggšg
 ba£_Ãt
 )
 
-288 
+291 
 ·¿ms
  = 
 ™”toŞs
@@ -9583,7 +9597,7 @@ sourû_Ïy”_add_Ús
 exŒas
 .parameters(),
 
-289 
+292 
 Ãt
 .
 »g»ssiÚ_h—d”s
@@ -9595,17 +9609,17 @@ exŒas
 	$·¿m‘”s
 ())
 
-290 
+293 
 ·¿ms
  = [
 
-291 {'·¿ms': 
+294 {'·¿ms': 
 ™”toŞs
 .
 	`chaš
 (
 
-292 
+295 
 Ãt
 .
 sourû_Ïy”_add_Ús
@@ -9613,7 +9627,7 @@ sourû_Ïy”_add_Ús
 	`·¿m‘”s
 (),
 
-293 
+296 
 Ãt
 .
 exŒas
@@ -9621,17 +9635,17 @@ exŒas
 	`·¿m‘”s
 ()
 
-294 ), 'Ì': 
+297 ), 'Ì': 
 exŒa_Ïy”s_Ì
 },
 
-295 {'·¿ms': 
+298 {'·¿ms': 
 ™”toŞs
 .
 chaš
 (
 
-296 
+299 
 Ãt
 .
 »g»ssiÚ_h—d”s
@@ -9639,7 +9653,7 @@ chaš
 ·¿m‘”s
 (),
 
-297 
+300 
 Ãt
 .
 şassifiÿtiÚ_h—d”s
@@ -9647,7 +9661,7 @@ chaš
 ·¿m‘”s
 ()
 
-300 
+303 
 –if
  
 	g¬gs
@@ -9655,7 +9669,7 @@ chaš
 	gä“ze_Ãt
 :
 
-301 
+304 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9663,7 +9677,7 @@ chaš
 ba£_Ãt
 )
 
-302 
+305 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9671,7 +9685,7 @@ ba£_Ãt
 sourû_Ïy”_add_Ús
 )
 
-303 
+306 
 	$ä“ze_Ãt_Ïy”s
 (
 Ãt
@@ -9679,7 +9693,7 @@ sourû_Ïy”_add_Ús
 exŒas
 )
 
-304 
+307 
 ·¿ms
  = 
 ™”toŞs
@@ -9697,17 +9711,17 @@ exŒas
 	$·¿m‘”s
 ())
 
-305 
+308 
 loggšg
 .
 	`šfo
 ("Freeze‡llhe†ayersƒxcept…rediction heads.")
 
-307 
+310 
 ·¿ms
  = [
 
-308 {'·¿ms': 
+311 {'·¿ms': 
 Ãt
 .
 ba£_Ãt
@@ -9717,13 +9731,13 @@ ba£_Ãt
 ba£_Ãt_Ì
 },
 
-309 {'·¿ms': 
+312 {'·¿ms': 
 ™”toŞs
 .
 chaš
 (
 
-310 
+313 
 Ãt
 .
 sourû_Ïy”_add_Ús
@@ -9731,7 +9745,7 @@ sourû_Ïy”_add_Ús
 ·¿m‘”s
 (),
 
-311 
+314 
 Ãt
 .
 exŒas
@@ -9739,17 +9753,17 @@ exŒas
 ·¿m‘”s
 ()
 
-312 ), 'Ì': 
+315 ), 'Ì': 
 exŒa_Ïy”s_Ì
 },
 
-313 {'·¿ms': 
+316 {'·¿ms': 
 ™”toŞs
 .
 chaš
 (
 
-314 
+317 
 Ãt
 .
 »g»ssiÚ_h—d”s
@@ -9757,7 +9771,7 @@ chaš
 ·¿m‘”s
 (),
 
-315 
+318 
 Ãt
 .
 şassifiÿtiÚ_h—d”s
@@ -9765,19 +9779,19 @@ chaš
 ·¿m‘”s
 ()
 
-319 
+322 
 	gtim”
 .
 ¡¬t
 ("Load Model")
 
-320 
+323 
 	g¬gs
 .
 	g»sume
 :
 
-321 
+324 
 loggšg
 .
 šfo
@@ -9785,7 +9799,7 @@ loggšg
 f
 "Resume fromhe model {args.resume}")
 
-322 
+325 
 Ãt
 .
 	$lßd
@@ -9795,7 +9809,7 @@ f
 »sume
 )
 
-323 
+326 
 –if
  
 ¬gs
@@ -9803,7 +9817,7 @@ f
 ba£_Ãt
 :
 
-324 
+327 
 loggšg
 .
 	`šfo
@@ -9811,7 +9825,7 @@ loggšg
 f
 "Init from base‚et {args.base_net}")
 
-325 
+328 
 Ãt
 .
 	$š™_äom_ba£_Ãt
@@ -9821,7 +9835,7 @@ f
 ba£_Ãt
 )
 
-326 
+329 
 –if
  
 ¬gs
@@ -9829,7 +9843,7 @@ ba£_Ãt
 ´‘¿šed_ssd
 :
 
-327 
+330 
 loggšg
 .
 	`šfo
@@ -9837,7 +9851,7 @@ loggšg
 f
 "Init from…retrained ssd {args.pretrained_ssd}")
 
-328 
+331 
 Ãt
 .
 	$š™_äom_´‘¿šed_ssd
@@ -9847,7 +9861,7 @@ f
 ´‘¿šed_ssd
 )
 
-329 
+332 
 loggšg
 .
 	`šfo
@@ -9855,7 +9869,7 @@ loggšg
 f
 'Took {timer.end("Load Model"):.2f} secondso†oadhe model.')
 
-331 
+334 
 Ãt
 .
 	$to
@@ -9863,7 +9877,7 @@ f
 DEVICE
 )
 
-333 
+336 
 ü™”iÚ
  = 
 	$MuÉiboxLoss
@@ -9877,7 +9891,7 @@ iou_th»shŞd
 Ãg_pos_¿tio
 =3,
 
-334 
+337 
 ûÁ”_v¬Ÿnû
 =0.1, 
 size_v¬Ÿnû
@@ -9887,7 +9901,7 @@ deviû
 DEVICE
 )
 
-335 
+338 
 İtimiz”
  = 
 tÜch
@@ -9905,13 +9919,13 @@ tÜch
 mom’tum
 =args.momentum,
 
-336 
+339 
 weight_deÿy
 =
 ¬gs
 .weight_decay)
 
-337 
+340 
 loggšg
 .
 	`šfo
@@ -9919,23 +9933,23 @@ loggšg
 f
 "Learning„ate: {args.lr}, Base‚et†earning„ate: {base_net_lr}, "
 
-338 + 
+341 + 
 f
 "Extra Layers†earning„ate: {extra_layers_lr}.")
 
-340 
+343 
 ¬gs
 .
 scheduËr
  == 'multi-step':
 
-341 
+344 
 loggšg
 .
 	`šfo
 ("Uses MultiStepLR scheduler.")
 
-342 
+345 
 me¡Úes
  = [(
 v
@@ -9953,7 +9967,7 @@ me¡Úes
 	`¥l™
 (",")]
 
-343 
+346 
 scheduËr
  = 
 	$MuÉiS‹pLR
@@ -9963,13 +9977,13 @@ scheduËr
 me¡Úes
 =milestones,
 
-344 
+347 
 gamma
 =0.1, 
 Ï¡_•och
 =last_epoch)
 
-345 
+348 
 –if
  
 ¬gs
@@ -9977,13 +9991,13 @@ gamma
 scheduËr
  == 'cosine':
 
-346 
+349 
 loggšg
 .
 	`šfo
 ("Uses CosineAnnealingLR scheduler.")
 
-347 
+350 
 scheduËr
  = 
 	$CosšeAÂ—lšgLR
@@ -9997,7 +10011,7 @@ t_max
 Ï¡_•och
 =last_epoch)
 
-349 
+352 
 loggšg
 .
 	`çl
@@ -10005,7 +10019,7 @@ loggšg
 f
 "Unsupported Scheduler: {args.scheduler}.")
 
-350 
+353 
 ·r£r
 .
 	$´št_h–p
@@ -10015,13 +10029,13 @@ sys
 ¡d”r
 )
 
-351 
+354 
 sys
 .
 	$ex™
 (1)
 
-353 
+356 
 loggšg
 .
 	`šfo
@@ -10029,7 +10043,7 @@ loggšg
 f
 "Startraining fromƒpoch {last_epoch + 1}.")
 
-354 
+357 
 •och
  
 š
@@ -10043,13 +10057,13 @@ f
 num_•ochs
 ):
 
-355 
+358 
 scheduËr
 .
 	$¡•
 ()
 
-356 
+359 
 	$Œaš
 (
 Œaš_lßd”
@@ -10061,7 +10075,7 @@ scheduËr
 İtimiz”
 ,
 
-357 
+360 
 deviû
 =
 DEVICE
@@ -10073,7 +10087,7 @@ debug_¡•s
 •och
 =epoch)
 
-359 
+362 
 •och
  % 
 ¬gs
@@ -10085,11 +10099,11 @@ v®id©iÚ_•ochs
 num_•ochs
  - 1:
 
-360 #DISTANCE 
+363 #DISTANCE 
 CHANGE
 
 
-361 
+364 
 v®_loss
 , 
 v®_»g»ssiÚ_loss
@@ -10109,37 +10123,37 @@ v®_lßd”
 DEVICE
 )
 
-362 
+365 
 loggšg
 .
 	`šfo
 (
 
-363 
+366 
 f
 "Epoch: {epoch}, " +
 
-364 
+367 
 f
 "Validation Loss: {val_loss:.4f}, " +
 
-365 
+368 
 f
 "Validation Regression Loss {val_regression_loss:.4f}, " +
 
-366 
+369 
 f
 "Validation Classification Loss: {val_classification_loss:.4f}"
 
-367 #DISTANCE 
+370 #DISTANCE 
 CHANGE
 
 
-368 
+371 
 f
 "Validation Distance Reg Loss: {val_dist_reg_loss:.4f}"
 
-370 
+373 
 mod–_·th
  = 
 os
@@ -10155,7 +10169,7 @@ checkpošt_fŞd”
 f
 "{args.net}-Epoch-{epoch}-Loss-{val_loss}.pth")
 
-371 
+374 
 Ãt
 .
 	$§ve
@@ -10163,7 +10177,7 @@ f
 mod–_·th
 )
 
-372 
+375 
 loggšg
 .
 	`šfo
@@ -11139,9 +11153,17 @@ dty³
 Å
 .
 	`¬¿y
-(
+([
+£lf
+.
+şass_diù
+[
+Ïb–
+] Ïb– 
+š
+ 
 image_šfo
-['Ïb–s'], 
+['Ïb–s']], 
 dty³
 òp.
 št64
@@ -11157,7 +11179,7 @@ di¡ªûs
 image_šfo
 ['di¡ªûs'], 
 dty³
-=
+òp.
 æßt32
 )
 
@@ -11326,20 +11348,10 @@ f
 "{self.root}/{self.dataset_type}_labels.json"
 
 45 
-ªnÙ©iÚs
- = 
-jsÚ
-.
-	$lßd
-(
-ªnÙ©iÚ_fe
-)
-
-46 
 şass_Çmes
  = ('BACKGROUND',
 
-53 
+52 
 şass_diù
  = {
 şass_Çme
@@ -11350,14 +11362,12 @@ i
  
 	`’um”©e
 (
-£lf
-.
 şass_Çmes
 )
 	}
 }
 
-54 
+53 
 w™h
  
 İ’
@@ -11369,7 +11379,7 @@ as
 	ga_fe
 :
 
-55 
+54 
 d©a
  = 
 jsÚ
@@ -11379,7 +11389,7 @@ jsÚ
 a_fe
 )
 
-56  
+55  
 d©a
 , 
 şass_Çmes
@@ -11387,7 +11397,7 @@ d©a
 şass_diù
 
 
-58 
+57 
 def
  
 	$__Ën__
@@ -11395,7 +11405,7 @@ def
 £lf
 ):
 
-59  
+58  
 	$Ën
 (
 £lf
@@ -11403,7 +11413,7 @@ def
 d©a
 )
 
-61 
+60 
 def
  
 	$_»ad_image
@@ -11413,7 +11423,7 @@ def
 image_id
 ):
 
-62 
+61 
 image_fe
  = 
 £lf
@@ -11425,7 +11435,7 @@ d©a£t_ty³
 f
 "{image_id}.jpg"
 
-63 
+62 
 image
  = 
 cv2
@@ -11437,13 +11447,13 @@ cv2
 image_fe
 ))
 
-64 
+63 
 image
 .
 sh­e
 [2] == 1:
 
-65 
+64 
 image
  = 
 cv2
@@ -11457,7 +11467,7 @@ cv2
 COLOR_GRAY2RGB
 )
 
-67 
+66 
 image
  = 
 cv2
@@ -11471,7 +11481,7 @@ cv2
 COLOR_BGR2RGB
 )
 
-68  
+67  
 image
 
 
@@ -15054,10 +15064,8 @@ tÜch
 
 
 6 
-äom
- 
-	ga
-.
+	gäom
+ ..
 uts
  
 impÜt
@@ -15439,11 +15447,17 @@ size_av”age
 F®£
 )
 
-53 #DISTANCE 
+53 
+	`´št
+(
+f
+"pred†oc shape {predicted_locations.shape} gt†oc shape {gt_locations.shape}")
+
+54 #DISTANCE 
 CHANGE
 
 
-54 
+55 
 ´ed_di¡
  =…»d_di¡[
 pos_mask
@@ -15451,7 +15465,7 @@ pos_mask
 	`»sh­e
 (-1, 1)
 
-55 
+56 
 l2_loss
  = 
 F
@@ -15467,7 +15481,7 @@ size_av”age
 F®£
 )
 
-57 
+58 
 num_pos
  = 
 gt_loÿtiÚs
@@ -15475,7 +15489,7 @@ gt_loÿtiÚs
 	$size
 (0)
 
-58  
+59  
 smoÙh_l1_loss
 /
 num_pos
@@ -30465,7 +30479,7 @@ CHANGE
 185 
 di¡ªûs
  = 
-gt_di¡ªûs
+gt_di¡
 [
 be¡_rg‘_³r_´iÜ_šdex
 ]
