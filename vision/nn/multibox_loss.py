@@ -50,8 +50,8 @@ class MultiboxLoss(nn.Module):
         gt_locations = gt_locations[pos_mask, :].reshape(-1, 4)
         smooth_l1_loss = F.smooth_l1_loss(predicted_locations, gt_locations, size_average=False)
 
-        print(f"pred loc shape {predicted_locations.shape} gt loc shape {gt_locations.shape}")
         # DISTANCE CHANGE
+        gt_dist = gt_dist[pos_mask, :].reshape(-1, 1)
         pred_dist = pred_dist[pos_mask, :].reshape(-1, 1)
         l2_loss = F.mse_loss(pred_dist, gt_dist, size_average=False)
 

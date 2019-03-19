@@ -138,7 +138,7 @@ def train(loader, net, criterion, optimizer, device, debug_steps=100, epoch=-1):
         running_regression_loss += regression_loss.item()
         running_classification_loss += classification_loss.item()
         # DISTANCE CHANGE
-        running_dist_reg_loss += dis_reg_loss.item()
+        running_dist_reg_loss += dist_reg_loss.item()
         if i and i % debug_steps == 0:
             avg_loss = running_loss / debug_steps
             avg_reg_loss = running_regression_loss / debug_steps
