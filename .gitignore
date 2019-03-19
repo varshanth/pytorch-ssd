@@ -24,4 +24,4 @@ __pycache__/
 .python-version
 
 # JSON files
-.json
+*.json
