@@ -45,21 +45,24 @@ class MultiboxLoss(nn.Module):
 
         confidence = confidence[mask, :]
         classification_loss = F.cross_entropy(confidence.reshape(-1, num_classes), labels[mask], size_average=False)
-        pos_mask = labels > 0
-        predicted_locations = predicted_locations[pos_mask, :].reshape(-1, 4)
-        gt_locations = gt_locations[pos_mask, :].reshape(-1, 4)
-        smooth_l1_loss = F.smooth_l1_loss(predicted_locations, gt_locations, size_average=False)
-
         # DISTANCE CHANGE
         person_mask = labels == 15
+        # pos_mask = labels > 0
+        # predicted_locations = predicted_locations[pos_mask, :].reshape(-1, 4)
+        # gt_locations = gt_locations[pos_mask, :].reshape(-1, 4)
+        predicted_locations = predicted_locations[person_mask, :].reshape(-1, 4)
+        gt_locations = gt_locations[person_mask, :].reshape(-1, 4)
+        smooth_l1_loss = F.smooth_l1_loss(predicted_locations, gt_locations, size_average=False)
+
         #print(f"Number of people: {torch.sum(person_mask)}")
         gt_dist = gt_dist[person_mask, :].reshape(-1, 1)
         pred_dist = pred_dist[person_mask, :].reshape(-1, 1)
         #l2_loss = F.mse_loss(pred_dist, gt_dist, size_average=False)
         dist_l1_loss = F.smooth_l1_loss(pred_dist, gt_dist, size_average=False)
 
+
         num_pos = gt_locations.size(0)
         num_person = gt_dist.size(0)
         #print(f"DEBUG: avg l1 loss {dist_l1_loss/num_person}")
         #return smooth_l1_loss/num_pos, classification_loss/num_pos, l2_loss/num_pos
-        return smooth_l1_loss/num_pos, classification_loss/num_pos, dist_l1_loss/num_person
+        return smooth_l1_loss/num_person, classification_loss/num_pos, dist_l1_loss/num_person
