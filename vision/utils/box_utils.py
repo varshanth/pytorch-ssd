@@ -254,7 +254,7 @@ def hard_nms(box_scores, iou_threshold, top_k=-1, candidate_size=200):
         )
         indexes = indexes[iou <= iou_threshold]
 
-    return box_scores[picked, :]
+    return box_scores[picked, :], picked
 
 
 def nms(box_scores, nms_method=None, score_threshold=None, iou_threshold=None,

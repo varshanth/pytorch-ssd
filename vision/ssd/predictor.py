@@ -34,17 +34,25 @@ class Predictor:
         images = images.to(self.device)
         with torch.no_grad():
             self.timer.start()
-            scores, boxes = self.net.forward(images)
+            # DISTANCE CHANGE
+            # scores, boxes = self.net.forward(images)
+            scores, boxes, distances = self.net.forward(images)
             print("Inference time: ", self.timer.end())
         boxes = boxes[0]
         scores = scores[0]
+        # DISTANCE CHANGE
+        distances = distances[0]
         if not prob_threshold:
             prob_threshold = self.filter_threshold
         # this version of nms is slower on GPU, so we move data to CPU.
         boxes = boxes.to(cpu_device)
         scores = scores.to(cpu_device)
+        # DISTANCE CHANGE
+        distances = distances.to(cpu_device)
         picked_box_probs = []
         picked_labels = []
+        # DISTANCE CHANGE
+        picked_distances = []
         for class_index in range(1, scores.size(1)):
             probs = scores[:, class_index]
             mask = probs > prob_threshold
@@ -52,14 +60,21 @@ class Predictor:
             if probs.size(0) == 0:
                 continue
             subset_boxes = boxes[mask, :]
+            # DISTANCE CHANGE
+            subset_distances = distances[mask, :]
+
             box_probs = torch.cat([subset_boxes, probs.reshape(-1, 1)], dim=1)
-            box_probs = box_utils.nms(box_probs, self.nms_method,
+            # DISTANCE CHANGE
+            #box_probs = box_utils.nms(box_probs, self.nms_method,
+            box_probs, picked_mask = box_utils.nms(box_probs, self.nms_method,
                                       score_threshold=prob_threshold,
                                       iou_threshold=self.iou_threshold,
                                       sigma=self.sigma,
                                       top_k=top_k,
                                       candidate_size=self.candidate_size)
             picked_box_probs.append(box_probs)
+            # DISTANCE CHANGE
+            picked_distances.extend(subset_distances[picked_mask, :])
             picked_labels.extend([class_index] * box_probs.size(0))
         if not picked_box_probs:
             return torch.tensor([]), torch.tensor([]), torch.tensor([])
@@ -68,4 +83,8 @@ class Predictor:
         picked_box_probs[:, 1] *= height
         picked_box_probs[:, 2] *= width
         picked_box_probs[:, 3] *= height
-        return picked_box_probs[:, :4], torch.tensor(picked_labels), picked_box_probs[:, 4]
+        # DISTANCE CHANGE
+        picked_distances = torch.tensor(picked_distances)
+        picked_distances = (picked_distances*250) + 200
+        #return picked_box_probs[:, :4], torch.tensor(picked_labels), picked_box_probs[:, 4]
+        return picked_box_probs[:, :4], torch.tensor(picked_labels), picked_distances, picked_box_probs[:, 4]

@@ -1,4 +1,4 @@
-cscope 15 $HOME/Downloads/pytorch-ssd               0000174355
+cscope 15 $HOME/Downloads/pytorch-ssd               0000175283
 	@convert_to_caffe2_models.py
 
 1 
@@ -6161,10 +6161,28 @@ cv2
 COLOR_BGR2RGB
 )
 
-55 
+55 #DISTANCE 
+CHANGE
+
+
+56 #boxes, 
+œbñs
+, 
+¥obs
+ = 
+¥edi˘‹
+.
+	`¥edi˘
+(
+image
+, 10, 0.4)
+
+57 
 boxes
 , 
 œbñs
+, 
+di°™˚s
 , 
 ¥obs
  = 
@@ -6175,7 +6193,19 @@ boxes
 image
 , 10, 0.4)
 
-57 
+58 
+	$¥öt
+(
+boxes
+)
+
+59 
+	$¥öt
+(
+di°™˚s
+)
+
+60 
 i
  
 ö
@@ -6187,7 +6217,7 @@ boxes
 	$size
 (0)):
 
-58 
+61 
 box
  = 
 boxes
@@ -6195,7 +6225,7 @@ boxes
 i
 , :]
 
-59 
+62 
 cv2
 .
 	`ª˘™gÀ
@@ -6205,17 +6235,17 @@ cv2
 box
 [0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
 
-60 #œbñ = 
+63 #œbñ = 
 f
 """{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
 
-61 
+64 
 œbñ
  = 
 f
-"{class_names[labels[i]]}: {probs[i]:.2f}"
+"{class_names[labels[i]]}: {probs[i]:.2f}@{distances[i]:.2f}cm"
 
-62 
+65 
 cv2
 .
 	`putText
@@ -6225,29 +6255,29 @@ cv2
 œbñ
 ,
 
-63 (
+66 (
 box
 [0] + 20, box[1] + 40),
 
-64 
+67 
 cv2
 .
 FONT_HERSHEY_SIMPLEX
 ,
 
-65 1, #f⁄à
+68 1, #f⁄à
 sˇÀ
 
 
-67 2Ë#löê
+70 2Ë#löê
 ty≥
 
 
-68 
+71 
 ∑th
  = "run_ssd_example_output.jpg"
 
-69 
+72 
 cv2
 .
 	$imwrôe
@@ -6257,7 +6287,7 @@ cv2
 ‹ig_image
 )
 
-70 
+73 
 	`¥öt
 (
 f
@@ -10058,12 +10088,18 @@ num_ïochs
 ):
 
 358 
+	`¥öt
+(
+f
+"------------EPOCH {epoch}-------------")
+
+359 
 scheduÀr
 .
 	$°ï
 ()
 
-359 
+360 
 	$åaö
 (
 åaö_lﬂdî
@@ -10075,7 +10111,7 @@ scheduÀr
 ›timizî
 ,
 
-360 
+361 
 devi˚
 =
 DEVICE
@@ -10087,7 +10123,7 @@ debug_°ïs
 ïoch
 =epoch)
 
-362 
+363 
 ïoch
  % 
 ¨gs
@@ -10099,11 +10135,11 @@ vÆid©i⁄_ïochs
 num_ïochs
  - 1:
 
-363 #DISTANCE 
+364 #DISTANCE 
 CHANGE
 
 
-364 
+365 
 vÆ_loss
 , 
 vÆ_ªgªssi⁄_loss
@@ -10123,37 +10159,37 @@ vÆ_lﬂdî
 DEVICE
 )
 
-365 
+366 
 loggög
 .
 	`öfo
 (
 
-366 
+367 
 f
 "Epoch: {epoch}, " +
 
-367 
+368 
 f
 "Validation Loss: {val_loss:.4f}, " +
 
-368 
+369 
 f
 "Validation Regression Loss {val_regression_loss:.4f}, " +
 
-369 
+370 
 f
 "Validation Classification Loss: {val_classification_loss:.4f}"
 
-370 #DISTANCE 
+371 #DISTANCE 
 CHANGE
 
 
-371 
+372 
 f
 "Validation Distance Reg Loss: {val_dist_reg_loss:.4f}"
 
-373 
+374 
 modñ_∑th
  = 
 os
@@ -10169,7 +10205,7 @@ checkpoöt_fﬁdî
 f
 "{args.net}-Epoch-{epoch}-Loss-{val_loss}.pth")
 
-374 
+375 
 √t
 .
 	$ßve
@@ -10177,7 +10213,7 @@ f
 modñ_∑th
 )
 
-375 
+376 
 loggög
 .
 	`öfo
@@ -11187,21 +11223,15 @@ dty≥
 Êﬂt32
 )
 
-26 
-	`¥öt
-(
+26 #¥öt(
 f
 "Image = {image_info['image_id']}")
 
-27 
-	`¥öt
-(
+27 #¥öt(
 f
 "Distances shape beforeÅransform {distances.shape}")
 
-28 
-	`¥öt
-(
+28 #¥öt(
 f
 "boxes shape beforeÅransform {boxes.shape}")
 
@@ -11253,15 +11283,11 @@ boxes
 di°™˚s
 )
 
-33 
-	`¥öt
-(
+33 #¥öt(
 f
 "Distances shapeáfterÅransform {distances.shape}")
 
-34 
-	`¥öt
-(
+34 #¥öt(
 f
 "boxes shape beforeÅransform {boxes.shape}")
 
@@ -15491,9 +15517,7 @@ CHANGE
 œbñs
  == 15
 
-55 
-	`¥öt
-(
+55 #¥öt(
 f
 "Number ofÖeople: {torch.sum(person_mask)}")
 
@@ -15559,11 +15583,9 @@ gt_di°
 	$size
 (0)
 
-63 
-	`¥öt
-(
+63 #¥öt(
 f
-"DEBUG:ávgÜ1Üoss {dist_l1_loss}")
+"DEBUG:ávgÜ1Üoss {dist_l1_loss/num_person}")
 
 64 #ªtu∫ 
 smoŸh_l1_loss
@@ -21678,7 +21700,7 @@ kî√l_size
 =1, 
 ⁄nx_com∑tibÀ
 =
-True
+FÆ£
 ),
 
 53 
@@ -21696,7 +21718,7 @@ kî√l_size
 =1, 
 ⁄nx_com∑tibÀ
 =
-True
+FÆ£
 ),
 
 54 
@@ -21714,7 +21736,7 @@ kî√l_size
 =1, 
 ⁄nx_com∑tibÀ
 =
-True
+FÆ£
 ),
 
 55 
@@ -21732,7 +21754,7 @@ kî√l_size
 =1, 
 ⁄nx_com∑tibÀ
 =
-True
+FÆ£
 ),
 
 56 
@@ -23239,10 +23261,28 @@ timî
 	$°¨t
 ()
 
-37 
+37 #DISTANCE 
+CHANGE
+
+
+38 #sc‹es, 
+boxes
+ = 
+£lf
+.
+√t
+.
+	`f‹w¨d
+(
+images
+)
+
+39 
 sc‹es
 , 
 boxes
+, 
+di°™˚s
  = 
 £lf
 .
@@ -23253,7 +23293,7 @@ boxes
 images
 )
 
-38 
+40 
 	`¥öt
 ("In„ªn˚Åime: ", 
 £lf
@@ -23263,21 +23303,29 @@ timî
 	$íd
 ())
 
-39 
+41 
 boxes
  = boxes[0]
 
-40 
+42 
 sc‹es
  = scores[0]
 
-41 
+43 #DISTANCE 
+CHANGE
+
+
+44 
+di°™˚s
+ = distances[0]
+
+45 
 nŸ
  
 ¥ob_thªshﬁd
 :
 
-42 
+46 
 ¥ob_thªshﬁd
  = 
 £lf
@@ -23285,7 +23333,7 @@ nŸ
 fûãr_thªshﬁd
 
 
-43 #thi†
+47 #thi†
 vîsi⁄
  
 of
@@ -23313,7 +23361,7 @@ to
 CPU
 .
 
-44 
+48 
 boxes
  = boxes.
 	$to
@@ -23321,7 +23369,7 @@ boxes
 ˝u_devi˚
 )
 
-45 
+49 
 sc‹es
  = sc‹es.
 	$to
@@ -23329,15 +23377,35 @@ sc‹es
 ˝u_devi˚
 )
 
-46 
+50 #DISTANCE 
+CHANGE
+
+
+51 
+di°™˚s
+ = di°™˚s.
+	$to
+(
+˝u_devi˚
+)
+
+52 
 picked_box_¥obs
  = []
 
-47 
+53 
 picked_œbñs
  = []
 
-48 
+54 #DISTANCE 
+CHANGE
+
+
+55 
+picked_di°™˚s
+ = []
+
+56 
 ˛ass_ödex
  
 ö
@@ -23349,7 +23417,7 @@ sc‹es
 	$size
 (1)):
 
-49 
+57 
 ¥obs
  = 
 sc‹es
@@ -23357,7 +23425,7 @@ sc‹es
 ˛ass_ödex
 ]
 
-50 
+58 
 mask
  = 
 ¥obs
@@ -23365,19 +23433,19 @@ mask
 ¥ob_thªshﬁd
 
 
-51 
+59 
 ¥obs
  =Örobs[
 mask
 ]
 
-52 
+60 
 ¥obs
 .
 	`size
 (0) == 0:
 
-54 
+62 
 sub£t_boxes
  = 
 boxes
@@ -23385,7 +23453,19 @@ boxes
 mask
 , :]
 
-55 
+63 #DISTANCE 
+CHANGE
+
+
+64 
+sub£t_di°™˚s
+ = 
+di°™˚s
+[
+mask
+, :]
+
+66 
 box_¥obs
  = 
 t‹ch
@@ -23401,8 +23481,26 @@ sub£t_boxes
 dim
 =1)
 
-56 
+67 #DISTANCE 
+CHANGE
+
+
+68 #box_¥ob†
+box_utûs
+.
+	`nms
+(
 box_¥obs
+, 
+£lf
+.
+nms_mëhod
+,
+
+69 
+box_¥obs
+, 
+picked_mask
  = 
 box_utûs
 .
@@ -23415,35 +23513,35 @@ box_¥obs
 nms_mëhod
 ,
 
-57 
+70 
 sc‹e_thªshﬁd
 =
 ¥ob_thªshﬁd
 ,
 
-58 
+71 
 iou_thªshﬁd
 =
 £lf
 .iou_threshold,
 
-59 
+72 
 sigma
 =
 £lf
 .sigma,
 
-60 
+73 
 t›_k
 =top_k,
 
-61 
+74 
 ˇndid©e_size
 =
 £lf
 .candidate_size)
 
-62 
+75 
 picked_box_¥obs
 .
 	$≠≥nd
@@ -23451,7 +23549,21 @@ picked_box_¥obs
 box_¥obs
 )
 
-63 
+76 #DISTANCE 
+CHANGE
+
+
+77 
+picked_di°™˚s
+.
+	$exãnd
+(
+sub£t_di°™˚s
+[
+picked_mask
+, :])
+
+78 
 picked_œbñs
 .
 	`exãnd
@@ -23463,13 +23575,13 @@ box_¥obs
 	$size
 (0))
 
-64 
+79 
 nŸ
  
 picked_box_¥obs
 :
 
-65  
+80  
 t‹ch
 .
 	`ãns‹
@@ -23477,7 +23589,7 @@ t‹ch
 	$ãns‹
 ([])
 
-66 
+81 
 picked_box_¥obs
  = 
 t‹ch
@@ -23487,31 +23599,49 @@ t‹ch
 picked_box_¥obs
 )
 
-67 
+82 
 picked_box_¥obs
 [:, 0] *
 width
 
 
-68 
+83 
 picked_box_¥obs
 [:, 1] *
 height
 
 
-69 
+84 
 picked_box_¥obs
 [:, 2] *
 width
 
 
-70 
+85 
 picked_box_¥obs
 [:, 3] *
 height
 
 
-71  
+86 #DISTANCE 
+CHANGE
+
+
+87 
+picked_di°™˚s
+ = 
+t‹ch
+.
+	$ãns‹
+(
+picked_di°™˚s
+)
+
+88 
+picked_di°™˚s
+ *= 450
+
+89 #ªtu∫ 
 picked_box_¥obs
 [:, :4], 
 t‹ch
@@ -23520,6 +23650,18 @@ t‹ch
 (
 picked_œbñs
 ),Öicked_box_probs[:, 4]
+
+90  
+picked_box_¥obs
+[:, :4], 
+t‹ch
+.
+	`ãns‹
+(
+picked_œbñs
+), 
+picked_di°™˚s
+,Öicked_box_probs[:, 4]
 
 	@vision/ssd/squeezenet_ssd_lite.py
 
@@ -31122,7 +31264,7 @@ iou_thªshﬁd
 box_sc‹es
 [
 picked
-, :]
+, :],Öicked
 
 260 
 def

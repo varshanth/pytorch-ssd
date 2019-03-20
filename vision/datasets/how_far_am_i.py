@@ -22,7 +22,7 @@ class HowFarAmIDataset:
         image = self._read_image(image_info['image_id'])
         boxes = np.array(image_info['boxes'], dtype=np.float32)
         labels = np.array([self.class_dict[label] for label in image_info['labels']], dtype=np.int64)
-        distances = np.array([[distance/450.0] for distance in image_info['distances']], dtype=np.float32)
+        distances = np.array([[(distance-200)/250.0] for distance in image_info['distances']], dtype=np.float32)
         #print(f"Image = {image_info['image_id']}")
         #print(f"Distances shape before transform {distances.shape}")
         #print(f"boxes shape before transform {boxes.shape}")

@@ -52,13 +52,14 @@ else:
 
 orig_image = cv2.imread(image_path)
 image = cv2.cvtColor(orig_image, cv2.COLOR_BGR2RGB)
-boxes, labels, probs = predictor.predict(image, 10, 0.4)
-
+# DISTANCE CHANGE
+#boxes, labels, probs = predictor.predict(image, 10, 0.4)
+boxes, labels, distances, probs = predictor.predict(image, 10, 0.4)
 for i in range(boxes.size(0)):
     box = boxes[i, :]
     cv2.rectangle(orig_image, (box[0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
     #label = f"""{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
-    label = f"{class_names[labels[i]]}: {probs[i]:.2f}"
+    label = f"{class_names[labels[i]]}: {probs[i]:.2f}@{distances[i]:.2f}cm"
     cv2.putText(orig_image, label,
                 (box[0] + 20, box[1] + 40),
                 cv2.FONT_HERSHEY_SIMPLEX,
