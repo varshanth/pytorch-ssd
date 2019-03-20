@@ -2,7 +2,7 @@ import json
 import os
 
 
-train_frac = 0.9
+train_frac = 0.85
 ds_root = './'
 train_dir = f"{ds_root}/train"
 test_dir = f"{ds_root}/test"

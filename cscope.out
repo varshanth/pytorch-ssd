@@ -1,4 +1,4 @@
-cscope 15 $HOME/Downloads/pytorch-ssd               0000175283
+cscope 15 $HOME/Downloads/pytorch-ssd               0000175406
 	@convert_to_caffe2_models.py
 
 1 
@@ -6193,19 +6193,7 @@ di¡ªûs
 image
 , 10, 0.4)
 
-58 
-	$´št
-(
-boxes
-)
-
-59 
-	$´št
-(
-di¡ªûs
-)
-
-60 
+58 
 i
  
 š
@@ -6217,7 +6205,7 @@ boxes
 	$size
 (0)):
 
-61 
+59 
 box
  = 
 boxes
@@ -6225,7 +6213,7 @@ boxes
 i
 , :]
 
-62 
+60 
 cv2
 .
 	`»ùªgË
@@ -6235,17 +6223,17 @@ cv2
 box
 [0], box[1]), (box[2], box[3]), (255, 255, 0), 4)
 
-63 #Ïb– = 
+61 #Ïb– = 
 f
 """{voc_dataset.class_names[labels[i]]}: {probs[i]:.2f}"""
 
-64 
+62 
 Ïb–
  = 
 f
 "{class_names[labels[i]]}: {probs[i]:.2f}@{distances[i]:.2f}cm"
 
-65 
+63 
 cv2
 .
 	`putText
@@ -6255,29 +6243,29 @@ cv2
 Ïb–
 ,
 
-66 (
+64 (
 box
 [0] + 20, box[1] + 40),
 
-67 
+65 
 cv2
 .
 FONT_HERSHEY_SIMPLEX
 ,
 
-68 1, #fÚˆ
+66 1, #fÚˆ
 sÿË
 
 
-70 2è#lš
+68 2è#lš
 ty³
 
 
-71 
+69 
 ·th
  = "run_ssd_example_output.jpg"
 
-72 
+70 
 cv2
 .
 	$imwr™e
@@ -6287,7 +6275,7 @@ cv2
 Üig_image
 )
 
-73 
+71 
 	`´št
 (
 f
@@ -11211,9 +11199,9 @@ di¡ªûs
 Å
 .
 	`¬¿y
-([[
+([[(
 di¡ªû
-/450.0] di¡ªû 
+-200)/250.0] di¡ªû 
 š
  
 image_šfo
@@ -15469,29 +15457,53 @@ size_av”age
 F®£
 )
 
-48 
-pos_mask
+48 #DISTANCE 
+CHANGE
+
+
+49 
+³rsÚ_mask
  = 
+Ïb–s
+ == 15
+
+50 #pos_mask = 
 Ïb–s
  > 0
 
-49 
+51 #´ediùed_loÿtiÚ ð
+´ediùed_loÿtiÚs
+[
+pos_mask
+, :].
+	`»sh­e
+(-1, 4)
+
+52 #gt_loÿtiÚ ð
+gt_loÿtiÚs
+[
+pos_mask
+, :].
+	`»sh­e
+(-1, 4)
+
+53 
 ´ediùed_loÿtiÚs
  =…»diùed_loÿtiÚs[
-pos_mask
+³rsÚ_mask
 , :].
 	`»sh­e
 (-1, 4)
 
-50 
+54 
 gt_loÿtiÚs
  = gt_loÿtiÚs[
-pos_mask
+³rsÚ_mask
 , :].
 	`»sh­e
 (-1, 4)
 
-51 
+55 
 smoÙh_l1_loss
  = 
 F
@@ -15507,21 +15519,11 @@ size_av”age
 F®£
 )
 
-53 #DISTANCE 
-CHANGE
-
-
-54 
-³rsÚ_mask
- = 
-Ïb–s
- == 15
-
-55 #´št(
+57 #´št(
 f
 "Number of…eople: {torch.sum(person_mask)}")
 
-56 
+58 
 gt_di¡
  = gt_di¡[
 ³rsÚ_mask
@@ -15529,7 +15531,7 @@ gt_di¡
 	`»sh­e
 (-1, 1)
 
-57 
+59 
 ´ed_di¡
  =…»d_di¡[
 ³rsÚ_mask
@@ -15537,7 +15539,7 @@ gt_di¡
 	`»sh­e
 (-1, 1)
 
-58 #l2_los ð
+60 #l2_los ð
 F
 .
 	`m£_loss
@@ -15551,7 +15553,7 @@ size_av”age
 F®£
 )
 
-59 
+61 
 di¡_l1_loss
  = 
 F
@@ -15567,7 +15569,7 @@ size_av”age
 F®£
 )
 
-61 
+64 
 num_pos
  = 
 gt_loÿtiÚs
@@ -15575,7 +15577,7 @@ gt_loÿtiÚs
 	$size
 (0)
 
-62 
+65 
 num_³rsÚ
  = 
 gt_di¡
@@ -15583,11 +15585,11 @@ gt_di¡
 	$size
 (0)
 
-63 #´št(
+66 #´št(
 f
 "DEBUG:‡vg†1†oss {dist_l1_loss/num_person}")
 
-64 #»tuº 
+67 #»tuº 
 smoÙh_l1_loss
 /
 num_pos
@@ -15597,17 +15599,17 @@ num_pos
 l2_loss
 /num_pos
 
-65  
+68  
 smoÙh_l1_loss
+/
+num_³rsÚ
+, 
+þassifiÿtiÚ_loss
 /
 num_pos
 , 
-þassifiÿtiÚ_loss
-/num_pos, 
 di¡_l1_loss
-/
-num_³rsÚ
-
+/num_person
 
 	@vision/nn/scaled_l2_norm.py
 
@@ -23639,7 +23641,7 @@ picked_di¡ªûs
 
 88 
 picked_di¡ªûs
- *= 450
+ = (picked_distances*250) + 200
 
 89 #»tuº 
 picked_box_´obs
