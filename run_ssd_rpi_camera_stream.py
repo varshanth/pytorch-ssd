@@ -31,6 +31,7 @@ counter = 0
 camera = PiCamera()
 camera.resolution = (1080, 720)
 camera.framerate = fps
+rawCapture = PiRGBArray(camera, size=(1080, 720))
 time.sleep(0.1)
 
 start = time.time()
