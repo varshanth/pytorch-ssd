@@ -1,6 +1,6 @@
 from vision.ssd.mobilenet_v2_ssd_lite import create_mobilenetv2_ssd_lite, create_mobilenetv2_ssd_lite_predictor
 import cv2
-import requests
+# import requests
 import argparse
 import numpy as np
 from picamera.array import PiRGBArray
@@ -10,7 +10,7 @@ import time
 parser = argparse.ArgumentParser(description='SSD Inference With Distance on Camera Stream')
 parser.add_argument('--model_path', type=str, required=True)
 parser.add_argument('--device', type=str, default='cpu')
-parser.add_argument('---get_url', type=str, default=None)
+# parser.add_argument('---get_url', type=str, default=None)
 parser.add_argument('--display_mode', type=int, default='0')
 
 args = parser.parse_args()
@@ -26,12 +26,11 @@ net = create_mobilenetv2_ssd_lite(len(class_names), is_test=True)
 net.load(args.model_path)
 predictor = create_mobilenetv2_ssd_lite_predictor(net, candidate_size=200, device=args.device)
 
-cap = cv2.ViideoCapture(0)
-fps = int(cap.get(cv2.CAP_PROP_FPS))
+fps = 10
 counter = 0
 camera = PiCamera()
 camera.resolution = (1080, 720)
-camera.framerate = 10
+camera.framerate = fps
 time.sleep(0.1)
 
 start = time.time()
@@ -69,10 +68,11 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
         print(frame_object_info)
     else:
         frame_object_info = []
+    '''
     if args.get_url:
         params_to_be_sent = {'x_d_list' : frame_object_info}
         request.get(url = args.get_url, params = params_to_be_sent)
-
+    '''
     if args.display_mode:
         for i in range(len(boxes)):
             box = boxes[i, :]
