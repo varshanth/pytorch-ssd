@@ -1,6 +1,7 @@
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
+import numpy as np
 
 
 from ..utils import box_utils
@@ -46,17 +47,21 @@ class MultiboxLoss(nn.Module):
         confidence = confidence[mask, :]
         classification_loss = F.cross_entropy(confidence.reshape(-1, num_classes), labels[mask], size_average=False)
         # DISTANCE CHANGE
-        person_mask = labels == 15
+        accepted_labels = [15]
+        accepted_obj_mask = torch.zeros_like(labels, dtype=torch.uint8)
+        for label in accepted_labels:
+            accepted_obj_mask += (labels == label)
+        accepted_obj_mask = accepted_obj_mask > 0
         # pos_mask = labels > 0
         # predicted_locations = predicted_locations[pos_mask, :].reshape(-1, 4)
         # gt_locations = gt_locations[pos_mask, :].reshape(-1, 4)
-        predicted_locations = predicted_locations[person_mask, :].reshape(-1, 4)
-        gt_locations = gt_locations[person_mask, :].reshape(-1, 4)
+        predicted_locations = predicted_locations[accepted_obj_mask, :].reshape(-1, 4)
+        gt_locations = gt_locations[accepted_obj_mask, :].reshape(-1, 4)
         smooth_l1_loss = F.smooth_l1_loss(predicted_locations, gt_locations, size_average=False)
 
-        #print(f"Number of people: {torch.sum(person_mask)}")
-        gt_dist = gt_dist[person_mask, :].reshape(-1, 1)
-        pred_dist = pred_dist[person_mask, :].reshape(-1, 1)
+        #print(f"Number of people: {torch.sum(accepted_obj_mask)}")
+        gt_dist = gt_dist[accepted_obj_mask, :].reshape(-1, 1)
+        pred_dist = pred_dist[accepted_obj_mask, :].reshape(-1, 1)
         #l2_loss = F.mse_loss(pred_dist, gt_dist, size_average=False)
         dist_l1_loss = F.smooth_l1_loss(pred_dist, gt_dist, size_average=False)
 
