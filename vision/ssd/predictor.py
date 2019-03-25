@@ -37,7 +37,7 @@ class Predictor:
             # DISTANCE CHANGE
             # scores, boxes = self.net.forward(images)
             scores, boxes, distances = self.net.forward(images)
-            print("Inference time: ", self.timer.end())
+            # print("Inference time: ", self.timer.end())
         boxes = boxes[0]
         scores = scores[0]
         # DISTANCE CHANGE
@@ -77,7 +77,7 @@ class Predictor:
             picked_distances.extend(subset_distances[picked_mask, :])
             picked_labels.extend([class_index] * box_probs.size(0))
         if not picked_box_probs:
-            return torch.tensor([]), torch.tensor([]), torch.tensor([])
+            return torch.tensor([]), torch.tensor([]), torch.tensor([]), torch.tensor([])
         picked_box_probs = torch.cat(picked_box_probs)
         picked_box_probs[:, 0] *= width
         picked_box_probs[:, 1] *= height
