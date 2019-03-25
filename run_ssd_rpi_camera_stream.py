@@ -29,9 +29,9 @@ predictor = create_mobilenetv2_ssd_lite_predictor(net, candidate_size=200, devic
 fps = 10
 counter = 0
 camera = PiCamera()
-camera.resolution = (1080, 720)
+camera.resolution = (640, 480)
 camera.framerate = fps
-rawCapture = PiRGBArray(camera, size=(1080, 720))
+rawCapture = PiRGBArray(camera, size=(640, 480))
 time.sleep(0.1)
 
 start = time.time()
