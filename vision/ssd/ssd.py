@@ -44,6 +44,7 @@ class SSD(nn.Module):
         distances = []
         start_layer_index = 0
         header_index = 0
+        #print('Running Through BaseNet Layer Sources')
         for end_layer_index in self.source_layer_indexes:
             if isinstance(end_layer_index, GraphPath):
                 path = end_layer_index
@@ -72,15 +73,18 @@ class SSD(nn.Module):
                 end_layer_index += 1
             start_layer_index = end_layer_index
             # DISTANCE CHANGE
+            #print('Computing headers')
             confidence, location, distance = self.compute_header(header_index, y)
             header_index += 1
             confidences.append(confidence)
             locations.append(location)
             # DISTANCE CHANGE
             distances.append(distance)
+        #print('Running Through BaseNet Layers')
 
         for layer in self.base_net[end_layer_index:]:
             x = layer(x)
+        #print('Running Through Extra Layers')
 
         for layer in self.extras:
             x = layer(x)
@@ -91,6 +95,7 @@ class SSD(nn.Module):
             locations.append(location)
             # DISTANCE CHANGE
             distances.append(distance)
+        #print('Composing The Inference')
 
         confidences = torch.cat(confidences, 1)
         locations = torch.cat(locations, 1)
@@ -99,10 +104,13 @@ class SSD(nn.Module):
 
         if self.is_test:
             confidences = F.softmax(confidences, dim=2)
+            #print('Converting Locations to Boxes')
             boxes = box_utils.convert_locations_to_boxes(
                 locations, self.priors, self.config.center_variance, self.config.size_variance
             )
+            #print('Converting center form to corner form')
             boxes = box_utils.center_form_to_corner_form(boxes)
+            #print('Returning')
             # DISTANCE CHANGE
             return confidences, boxes, distances
         else:

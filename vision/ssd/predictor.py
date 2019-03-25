@@ -36,7 +36,9 @@ class Predictor:
             self.timer.start()
             # DISTANCE CHANGE
             # scores, boxes = self.net.forward(images)
+            #print('Running Forward Pass')
             scores, boxes, distances = self.net.forward(images)
+            #print('Done')
             # print("Inference time: ", self.timer.end())
         boxes = boxes[0]
         scores = scores[0]
@@ -53,6 +55,7 @@ class Predictor:
         picked_labels = []
         # DISTANCE CHANGE
         picked_distances = []
+        #print('Filtering boxes')
         for class_index in range(1, scores.size(1)):
             probs = scores[:, class_index]
             mask = probs > prob_threshold
@@ -76,15 +79,26 @@ class Predictor:
             # DISTANCE CHANGE
             picked_distances.extend(subset_distances[picked_mask, :])
             picked_labels.extend([class_index] * box_probs.size(0))
+        #print('Finished Filtering')
         if not picked_box_probs:
             return torch.tensor([]), torch.tensor([]), torch.tensor([]), torch.tensor([])
+        # RASPBERRYPI TORCH BUG: CANNOT EXECUTE COL OPS WHEN NUM_ROWS = 1
         picked_box_probs = torch.cat(picked_box_probs)
         picked_box_probs[:, 0] *= width
         picked_box_probs[:, 1] *= height
         picked_box_probs[:, 2] *= width
         picked_box_probs[:, 3] *= height
+        #print(f'Number of bboxes = {len(picked_box_probs)}')
+        '''
+        for i in range(len(picked_box_probs)):
+            picked_box_probs[i][0] *= width
+            picked_box_probs[i][1] *= height
+            picked_box_probs[i][2] *= width
+            picked_box_probs[i][3] *= height
+        '''
         # DISTANCE CHANGE
         picked_distances = torch.tensor(picked_distances)
         picked_distances = (picked_distances*250) + 200
         #return picked_box_probs[:, :4], torch.tensor(picked_labels), picked_box_probs[:, 4]
+        #print('Returning')
         return picked_box_probs[:, :4], torch.tensor(picked_labels), picked_distances, picked_box_probs[:, 4]
