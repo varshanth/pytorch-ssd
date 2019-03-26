@@ -53,8 +53,8 @@ elif net_type == 'sq-ssd-lite':
 else:
     predictor = create_vgg_ssd_predictor(net, candidate_size=200, device=device)
 
-data = {}
-data['persons'] = []
+data = []
+accepted_labels = [9, 15]
 for images in os.listdir(images_folder):
 	#pil_image = Image.open(images_folder + "/" + images).convert('RGB')
 	#orig_image = np.array(pil_image)
@@ -83,15 +83,14 @@ for images in os.listdir(images_folder):
 			(255, 0, 255),
 			2)  # line type
 
-		if labels[i] == 15:
+		if labels[i] in accepted_labels:
 			data_per_image['boxes'].append(box.cpu().numpy().tolist())
-			data_per_image['labels'].append('person')
+			data_per_image['labels'].append(class_names[labels[i]])
 			data_per_image['distances'].append(10)
-	data['persons'].append(data_per_image)
+	data.append(data_per_image)
 
-data = sorted(data, key=lambda k: k['persons'].get('image_id', 0), reverse=True)
 with open('data.txt', 'w') as outfile:
-        json.dump(data, outfile)
+        json.dump(data, outfile, indent=4)
 path = "run_ssd_example_output.jpg"
 cv2.imwrite(path, trans_image)
 print(f"Found {len(probs)} objects. The output image is {path}")
